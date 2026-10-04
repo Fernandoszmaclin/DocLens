@@ -1,0 +1,204 @@
+{
+  "description": "Documentos fictícios criados para DocLens; nomes e situações sem vínculo com pessoas reais.",
+  "documents": [
+    {
+      "id": "manutencao_01",
+      "split": "development",
+      "category": "manutencao",
+      "title": "Manutenção dos equipamentos de informática",
+      "paragraphs": [
+        "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados. A equipe de suporte fará uma revisão dos equipamentos na próxima terça-feira, durante o período da manhã.",
+        "Solicitamos que os colaboradores salvem seus arquivos na pasta compartilhada antes do início do serviço. Serão verificados o armazenamento, a memória e o sistema operacional de cada máquina.",
+        "Durante a intervenção, o atendimento será realizado na sala de reuniões. A previsão de conclusão é às doze horas. Dúvidas devem ser encaminhadas ao setor de tecnologia."
+      ]
+    },
+    {
+      "id": "manutencao_02",
+      "split": "evaluation",
+      "category": "manutencao",
+      "title": "Revisão do sistema de climatização",
+      "paragraphs": [
+        "Os aparelhos de ar-condicionado do auditório estão produzindo ruído excessivo e resfriamento insuficiente. A equipe de manutenção realizará limpeza dos filtros e inspeção dos componentes.",
+        "O auditório ficará indisponível na quarta-feira, das oito às quinze horas. As atividades previstas para esse intervalo devem ser transferidas para a sala de treinamento.",
+        "A liberação do ambiente dependerá da verificação da temperatura e do funcionamento dos equipamentos. O responsável pelo prédio comunicará a conclusão do serviço aos organizadores."
+      ]
+    },
+    {
+      "id": "manutencao_03",
+      "split": "evaluation",
+      "category": "manutencao",
+      "title": "Intervenção na rede de comunicação",
+      "paragraphs": [
+        "A conexão de internet do bloco administrativo apresenta interrupções frequentes. Será realizada a substituição do roteador central e a revisão dos cabos de rede na sexta-feira.",
+        "O acesso à rede ficará temporariamente suspenso entre dezoito e vinte horas. Os colaboradores devem concluir o envio de documentos eletrônicos antes desse horário.",
+        "Após a instalação, serão realizados testes de conectividade em todas as salas. Caso a instabilidade permaneça, registre uma solicitação no canal de suporte informando o local e o equipamento utilizado."
+      ]
+    },
+    {
+      "id": "compras_01",
+      "split": "development",
+      "category": "compras",
+      "title": "Reposição de materiais de expediente",
+      "paragraphs": [
+        "O estoque de papel, canetas e pastas está próximo do limite mínimo. O almoxarifado organizará uma compra conjunta de materiais de escritório para atender aos setores administrativos.",
+        "Cada setor deve informar a quantidade necessária até quinta-feira. A lista deve apresentar o nome do material, a unidade de medida e a previsão de consumo para o próximo mês.",
+        "Os pedidos serão consolidados antes da consulta aos fornecedores. A distribuição ocorrerá conforme a chegada dos produtos, com registro da retirada pelo responsável de cada equipe."
+      ]
+    },
+    {
+      "id": "compras_02",
+      "split": "evaluation",
+      "category": "compras",
+      "title": "Aquisição de mobiliário para atendimento",
+      "paragraphs": [
+        "A recepção receberá novas cadeiras e mesas para melhorar o conforto dos visitantes e a organização do espaço. O setor de compras iniciou a pesquisa de fornecedores de mobiliário.",
+        "As propostas devem considerar dimensões compatíveis com o ambiente e materiais de fácil limpeza. A entrega será agendada para um período sem atendimento ao público.",
+        "Antes da confirmação da compra, a equipe responsável verificará o orçamento disponível e a adequação dos itens solicitados. As peças antigas serão encaminhadas ao depósito para avaliação de reaproveitamento."
+      ]
+    },
+    {
+      "id": "compras_03",
+      "split": "evaluation",
+      "category": "compras",
+      "title": "Entrega de equipamentos de proteção",
+      "paragraphs": [
+        "A equipe de conservação receberá luvas, óculos e calçados de proteção adquiridos para as atividades de limpeza e manutenção. Os itens estarão disponíveis no almoxarifado na segunda-feira.",
+        "Cada colaborador deverá verificar o tamanho e as condições dos produtos no momento da retirada. Eventuais problemas devem ser comunicados antes da utilização do material.",
+        "A entrega será registrada em uma ficha individual com descrição e quantidade dos itens. O responsável pelo setor acompanhará a reposição conforme o desgaste observado nas atividades."
+      ]
+    },
+    {
+      "id": "horarios_01",
+      "split": "development",
+      "category": "horarios",
+      "title": "Alteração do expediente administrativo",
+      "paragraphs": [
+        "O expediente dos setores administrativos será alterado durante a semana de organização interna. As equipes trabalharão das oito às dezesseis horas, com intervalo habitual para almoço.",
+        "O atendimento presencial ao público ocorrerá das nove às quinze horas. Solicitações recebidas após esse período serão encaminhadas para análise no próximo dia útil.",
+        "Os gestores devem ajustar os compromissos de suas equipes e informar parceiros sobre o horário temporário. O funcionamento regular será retomado na semana seguinte."
+      ]
+    },
+    {
+      "id": "horarios_02",
+      "split": "evaluation",
+      "category": "horarios",
+      "title": "Reserva das salas de reunião",
+      "paragraphs": [
+        "As salas de reunião poderão ser utilizadas mediante agendamento prévio na agenda compartilhada. O período disponível para reservas será das nove às dezessete horas, de segunda a sexta-feira.",
+        "Ao solicitar uma sala, informe a duração da atividade, o número de participantes e a necessidade de equipamentos de apresentação. Reservas sobrepostas serão analisadas pela secretaria.",
+        "Quando uma reunião for cancelada, o organizador deverá liberar o horário para permitir o uso por outras equipes. Ao final da atividade, deixe o ambiente organizado e desligue os equipamentos."
+      ]
+    },
+    {
+      "id": "horarios_03",
+      "split": "evaluation",
+      "category": "horarios",
+      "title": "Funcionamento do almoxarifado",
+      "paragraphs": [
+        "A retirada de materiais no almoxarifado será realizada às terças e quintas-feiras, das dez às doze horas. O novo horário permitirá organizar o estoque e conferir os registros de movimentação.",
+        "Os setores devem encaminhar a relação de itens até o dia anterior à retirada. O responsável pela solicitação deverá comparecer com a identificação do setor e conferir os produtos recebidos.",
+        "Demandas urgentes fora desse período devem ser comunicadas à coordenação administrativa. A equipe avaliará a disponibilidade dos materiais e informará uma alternativa de atendimento."
+      ]
+    },
+    {
+      "id": "solicitacoes_01",
+      "split": "development",
+      "category": "solicitacoes",
+      "title": "Procedimento para solicitação de transporte",
+      "paragraphs": [
+        "Os colaboradores que precisarem de veículo para atividades externas deverão encaminhar uma solicitação de transporte à coordenação. O pedido deve ser feito com antecedência mínima de dois dias úteis.",
+        "Informe o destino, o objetivo da atividade, os horários previstos de saída e retorno e a quantidade de passageiros. A confirmação dependerá da disponibilidade de veículo e motorista.",
+        "Alterações no itinerário devem ser comunicadas antes da viagem. Após o retorno, registre a realização da atividade para atualização do controle de utilização da frota."
+      ]
+    },
+    {
+      "id": "solicitacoes_02",
+      "split": "evaluation",
+      "category": "solicitacoes",
+      "title": "Pedido de acesso à pasta compartilhada",
+      "paragraphs": [
+        "Novos integrantes das equipes deverão solicitar permissão para consultar a pasta compartilhada de documentos. O pedido será encaminhado pelo gestor ao setor de tecnologia.",
+        "A solicitação deve informar o nome do colaborador, o setor de atuação e os diretórios necessários às suas atividades. O acesso será concedido conforme as responsabilidades da função.",
+        "Quando houver mudança de equipe ou encerramento das atividades, o gestor deverá comunicar a atualização das permissões. Os arquivos institucionais devem permanecer nos diretórios definidos para cada setor."
+      ]
+    },
+    {
+      "id": "solicitacoes_03",
+      "split": "evaluation",
+      "category": "solicitacoes",
+      "title": "Solicitação de participação em capacitação",
+      "paragraphs": [
+        "Os colaboradores interessados em cursos e oficinas deverão apresentar uma solicitação de capacitação ao gestor. O pedido deve descrever o conteúdo da atividade e sua relação com o trabalho desenvolvido.",
+        "Inclua a instituição responsável, as datas, a carga horária e o custo previsto. A análise considerará o planejamento da equipe e a disponibilidade de recursos para formação.",
+        "Após a participação, o colaborador deverá compartilhar os principais aprendizados com o setor e apresentar o comprovante de conclusão para registro da atividade."
+      ]
+    }
+  ],
+  "queries": [
+    { "query": "Problemas nos computadores", "relevant": ["manutencao_01"] },
+    {
+      "query": "Notebooks lentos e desligando sozinhos",
+      "relevant": ["manutencao_01"]
+    },
+    {
+      "query": "O auditório está quente e barulhento",
+      "relevant": ["manutencao_02"]
+    },
+    {
+      "query": "Limpeza dos filtros do ar-condicionado",
+      "relevant": ["manutencao_02"]
+    },
+    { "query": "A internet cai toda hora", "relevant": ["manutencao_03"] },
+    {
+      "query": "Substituição do roteador central",
+      "relevant": ["manutencao_03"]
+    },
+    { "query": "Reposição de materiais", "relevant": ["compras_01"] },
+    {
+      "query": "Estamos ficando sem papel e canetas",
+      "relevant": ["compras_01"]
+    },
+    {
+      "query": "Novos assentos para quem espera na recepção",
+      "relevant": ["compras_02"]
+    },
+    { "query": "Aquisição de mesas e cadeiras", "relevant": ["compras_02"] },
+    {
+      "query": "Equipamentos para proteger quem faz a limpeza",
+      "relevant": ["compras_03"]
+    },
+    { "query": "Mudança de expediente", "relevant": ["horarios_01"] },
+    {
+      "query": "Quando o público pode ser atendido presencialmente?",
+      "relevant": ["horarios_01"]
+    },
+    {
+      "query": "Como marcar um encontro da equipe em uma sala?",
+      "relevant": ["horarios_02"]
+    },
+    {
+      "query": "Agendamento na agenda compartilhada",
+      "relevant": ["horarios_02"]
+    },
+    {
+      "query": "Dias em que posso pegar produtos no estoque",
+      "relevant": ["horarios_03"]
+    },
+    {
+      "query": "Preciso de um carro e motorista para uma visita",
+      "relevant": ["solicitacoes_01"]
+    },
+    {
+      "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+      "relevant": ["solicitacoes_02"]
+    },
+    {
+      "query": "Quero fazer um curso relacionado ao meu trabalho",
+      "relevant": ["solicitacoes_03"]
+    },
+    {
+      "query": "Solicitação de capacitação e comprovante de conclusão",
+      "relevant": ["solicitacoes_03"]
+    }
+  ]
+}

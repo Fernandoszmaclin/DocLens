@@ -1,0 +1,10 @@
+{
+  "seed": 2026,
+  "font": "arial.ttf",
+  "platform": "Windows",
+  "dimensions": [
+    1240,
+    1754
+  ],
+  "degradation": "contrast=0.65, noise=6, blur=0.7, rotation=1.7"
+}
