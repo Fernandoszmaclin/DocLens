@@ -1,0 +1,31 @@
+{
+  "description": "Consultas novas para diagnóstico: erros de digitação, paráfrases, negação, assuntos ausentes e códigos. Corpus fictício já conhecido; não avaliação independente.",
+  "queries": [
+    {"query":"probelmas nos computdores","relevant":["manutencao_01"],"targets":[[0,0]],"kind":"typo"},
+    {"query":"Meu notebook fica lento e desliga sozinho","relevant":["manutencao_01"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"O computador não liga","relevant":["manutencao_01"],"targets":[[0,0]],"kind":"negation"},
+    {"query":"Wi-Fi instável e conexão interrompida","relevant":["manutencao_03"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Barulho e pouco frio no ar condicionado","relevant":["manutencao_02"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Luvas e óculos para quem limpa salas","relevant":["compras_03"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Papel canetas e pastas acabando","relevant":["compras_01"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Mesas e cadeiras novas na recepção","relevant":["compras_02"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Qual horário de atendimento ao público?","relevant":["horarios_01"],"targets":[[1,0]],"kind":"paraphrase"},
+    {"query":"Como marcar uma sala para reunião?","relevant":["horarios_02"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Até quando envio a lista para retirar itens?","relevant":["horarios_03"],"targets":[[1,0]],"kind":"paraphrase"},
+    {"query":"Veículo com motorista para atividade externa","relevant":["solicitacoes_01"],"targets":[[0,0],[1,1]],"kind":"paraphrase"},
+    {"query":"Como pedir permissão para consultar arquivos compartilhados?","relevant":["solicitacoes_02"],"targets":[[0,0]],"kind":"paraphrase"},
+    {"query":"Onde entregar o certificado depois do curso?","relevant":["solicitacoes_03"],"targets":[[2,0]],"kind":"paraphrase"},
+    {"query":"Não quero ar-condicionado: preciso de luvas para limpeza","relevant":["compras_03"],"targets":[[0,0]],"kind":"negation"},
+    {"query":"Cardápio do refeitório de amanhã","relevant":[],"kind":"absent"},
+    {"query":"Resultado do campeonato de futebol","relevant":[],"kind":"absent"},
+    {"query":"Tabela de salários dos colaboradores","relevant":[],"kind":"absent"},
+    {"query":"Valor da mensalidade do plano de saúde","relevant":[],"kind":"absent"},
+    {"query":"Convocação para concurso público","relevant":[],"kind":"absent"},
+    {"query":"Como pedir férias de 30 dias?","relevant":[],"kind":"absent"},
+    {"query":"Entrega de equipamentos de proteção em dezembro de 2030","relevant":[],"kind":"absent_year"},
+    {"query":"MANUTENCAO_01","relevant":["manutencao_01"],"kind":"identifier"},
+    {"query":"MANUTENCAO-01","relevant":["manutencao_01"],"kind":"identifier"},
+    {"query":"MEM-999/2026","relevant":[],"kind":"identifier"},
+    {"query":"MANUTENCAO_99","relevant":[],"kind":"identifier"}
+  ]
+}

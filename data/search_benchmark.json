@@ -1,0 +1,37 @@
+{
+  "description": "Anotações de passagens para as 20 consultas originais, mais 10 perguntas sem resposta. Pares [parágrafo, frase], com -1 indicando título. Usado para diagnóstico e regressão; conjunto sintético já inspecionado pelo autor, não teste independente.",
+  "positive_targets": [
+    [[-1, 0], [0, 0]],
+    [[0, 0]],
+    [[0, 0]],
+    [[0, 1]],
+    [[0, 0]],
+    [[0, 1]],
+    [[-1, 0], [0, 0], [0, 1]],
+    [[0, 0]],
+    [[0, 0]],
+    [[-1, 0], [0, 0]],
+    [[-1, 0], [0, 0]],
+    [[-1, 0], [0, 0], [0, 1]],
+    [[1, 0]],
+    [[0, 0], [1, 0]],
+    [[0, 0]],
+    [[0, 0]],
+    [[-1, 0], [0, 0], [1, 1]],
+    [[-1, 0], [0, 0], [0, 1]],
+    [[0, 0], [0, 1]],
+    [[0, 0], [2, 0]]
+  ],
+  "negative_queries": [
+    {"query": "Previsão do tempo amanhã", "split": "development"},
+    {"query": "Cardápio do refeitório", "split": "development"},
+    {"query": "Pagamento de salários e benefícios", "split": "development"},
+    {"query": "Reembolso das despesas de viagem", "split": "development"},
+    {"query": "Como renovar contrato de trabalho?", "split": "development"},
+    {"query": "Resultado do campeonato de futebol", "split": "evaluation"},
+    {"query": "Receita de bolo de chocolate", "split": "evaluation"},
+    {"query": "Inscrição no plano de saúde dos funcionários", "split": "evaluation"},
+    {"query": "Valor do auxílio alimentação", "split": "evaluation"},
+    {"query": "Prazo para pagamento da conta de energia", "split": "evaluation"}
+  ]
+}
