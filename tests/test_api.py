@@ -148,10 +148,12 @@ def test_busy_processor(client):
 
 
 def test_model_failure_removes_partial_upload(settings):
-    class UnavailableModels:
-        @property
-        def reader(self):
+    class UnavailableReader:
+        def readtext(self, image, **kwargs):
             raise ModelUnavailable()
+
+    class UnavailableModels:
+        reader = UnavailableReader()
 
     with TestClient(create_app(settings, UnavailableModels())) as client:
         result = client.post("/documents", files={"file": ("memo.png", image_bytes())})
@@ -159,6 +161,46 @@ def test_model_failure_removes_partial_upload(settings):
         assert "prepare_models" in result.json()["detail"]
         assert client.get("/documents").json() == []
     assert not list(settings.data_dir.glob("*/[1-5].png"))
+
+
+def test_startup_loads_ocr_before_requests_without_loading_search_models(settings):
+    class StartupModels:
+        def __init__(self):
+            self.reader_accesses = 0
+
+        @property
+        def reader(self):
+            self.reader_accesses += 1
+            return FakeModels.reader
+
+        @property
+        def encoder(self):
+            pytest.fail("A inicialização não deve carregar embeddings.")
+
+        @property
+        def reranker(self):
+            pytest.fail("A inicialização não deve carregar o verificador de busca.")
+
+    models = StartupModels()
+    app = create_app(settings, models)
+    assert models.reader_accesses == 0
+    with TestClient(app) as client:
+        assert models.reader_accesses == 1
+        assert client.get("/health").json()["status"] == "ok"
+        assert app.state.service.models is models
+    assert models.reader_accesses == 1
+
+
+def test_missing_ocr_blocks_startup_with_recovery_instruction(settings, caplog):
+    class UnavailableModels:
+        @property
+        def reader(self):
+            raise ModelUnavailable()
+
+    with pytest.raises(ModelUnavailable, match="prepare_models"):
+        with TestClient(create_app(settings, UnavailableModels())):
+            pytest.fail("O servidor não deve aceitar requisições sem OCR.")
+    assert "uv run python -m scripts.prepare_models" in caplog.text
 
 
 def test_home_and_docs(client):

@@ -1,4 +1,4 @@
-"""Modelos carregados uma vez, sob demanda, e sempre em CPU."""
+"""Modelos em CPU: OCR antecipado pela API; modelos de busca sob demanda."""
 
 import hashlib
 import os
