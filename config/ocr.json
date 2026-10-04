@@ -1,0 +1,14 @@
+{
+  "preprocess": true,
+  "selected_on": "development",
+  "weighted_cer": {
+    "false": 0.044199802826158395,
+    "true": 0.01593821886296418
+  },
+  "document_ids": [
+    "manutencao_01",
+    "compras_01",
+    "horarios_01",
+    "solicitacoes_01"
+  ]
+}
