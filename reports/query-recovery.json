@@ -1,0 +1,521 @@
+{
+  "generated_at": "2026-10-04T02:07:07.944956+00:00",
+  "before_generated_at": {
+    "stress": "2026-10-03T23:28:57.389455+00:00",
+    "original": "2026-10-03T23:31:36.798125+00:00"
+  },
+  "cases": [
+    {
+      "query": "probelmas nos computdores",
+      "classification": "recovered",
+      "reason": "Duas correções únicas de uma edição; fonte e destaque preservados.",
+      "before": {
+        "query": "probelmas nos computdores",
+        "relevant": [
+          "manutencao_01"
+        ],
+        "targets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "kind": "typo",
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.05671460001030937,
+        "hits": []
+      },
+      "after": {
+        "query": "probelmas nos computdores",
+        "relevant": [
+          "manutencao_01"
+        ],
+        "targets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "kind": "typo",
+        "interpreted_query": "problemas nos computadores",
+        "corrections": [
+          {
+            "original": "probelmas",
+            "replacement": "problemas"
+          },
+          {
+            "original": "computdores",
+            "replacement": "computadores"
+          }
+        ],
+        "excluded_terms": [],
+        "document_recall_at_3": true,
+        "focused_at_1": true,
+        "focused_at_3": true,
+        "top1_precision": 1.0,
+        "rejected": false,
+        "seconds": 1.2407462000264786,
+        "hits": [
+          {
+            "document": "manutencao_01",
+            "text": "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados.",
+            "score": 0.016129032258064516,
+            "semantic_score": 0.5174844861030579,
+            "tfidf_score": 0.0,
+            "rrf_score": 0.016129032258064516,
+            "relevance_score": -2.7826850414276123,
+            "boxes": 1,
+            "precision": 1.0,
+            "focused": true
+          }
+        ]
+      }
+    },
+    {
+      "query": "Não quero ar-condicionado: preciso de luvas para limpeza",
+      "classification": "recovered",
+      "reason": "Pedido positivo separado da preferência explícita de exclusão.",
+      "before": {
+        "query": "Não quero ar-condicionado: preciso de luvas para limpeza",
+        "relevant": [
+          "compras_03"
+        ],
+        "targets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "kind": "negation",
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.022002500016242266,
+        "hits": []
+      },
+      "after": {
+        "query": "Não quero ar-condicionado: preciso de luvas para limpeza",
+        "relevant": [
+          "compras_03"
+        ],
+        "targets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "kind": "negation",
+        "interpreted_query": "preciso de luvas para limpeza",
+        "corrections": [],
+        "excluded_terms": [
+          "ar-condicionado"
+        ],
+        "document_recall_at_3": true,
+        "focused_at_1": true,
+        "focused_at_3": true,
+        "top1_precision": 1.0,
+        "rejected": false,
+        "seconds": 0.08367150003323331,
+        "hits": [
+          {
+            "document": "compras_03",
+            "text": "equipe de conservação receberá luvas, óculos calçados de proteção adquiridos para as atividades de limpeza manutenção.",
+            "score": 0.03278688524590164,
+            "semantic_score": 0.6129281520843506,
+            "tfidf_score": 0.23335497458985893,
+            "rrf_score": 0.03278688524590164,
+            "relevance_score": -1.7070233821868896,
+            "boxes": 4,
+            "precision": 1.0,
+            "focused": true
+          }
+        ]
+      }
+    },
+    {
+      "query": "Inscrição no plano de saúde dos funcionários",
+      "classification": "false_positive_removed",
+      "reason": "Passagem genérica sem evidência do assunto na página; cosseno abaixo de 0,5 e verificação negativa.",
+      "before": {
+        "query": "Inscrição no plano de saúde dos funcionários",
+        "split": "evaluation",
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0.0,
+        "rejected": false,
+        "seconds": 0.025491799984592944,
+        "hits": [
+          {
+            "document": "horarios_03",
+            "text": "A equipe avaliará a disponibilidade dos materiais e informará uma alternativa de atendimento.",
+            "score": 0.013513513513513514,
+            "semantic_score": 0.4487471580505371,
+            "tfidf_score": 0.0,
+            "rrf_score": 0.013513513513513514,
+            "relevance_score": -3.188399076461792,
+            "boxes": 2,
+            "precision": 0.0,
+            "focused": false
+          }
+        ]
+      },
+      "after": {
+        "query": "Inscrição no plano de saúde dos funcionários",
+        "split": "evaluation",
+        "interpreted_query": "Inscrição no plano de saúde dos funcionários",
+        "corrections": [],
+        "excluded_terms": [],
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.0189455000218004,
+        "hits": []
+      }
+    },
+    {
+      "query": "O computador não liga",
+      "classification": "no_explicit_information",
+      "reason": "A fonte descreve lentidão/desligamentos, não falha ao ligar.",
+      "before": {
+        "query": "O computador não liga",
+        "relevant": [
+          "manutencao_01"
+        ],
+        "targets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "kind": "negation",
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.021534100000280887,
+        "hits": []
+      },
+      "after": {
+        "query": "O computador não liga",
+        "relevant": [
+          "manutencao_01"
+        ],
+        "targets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "kind": "negation",
+        "interpreted_query": "O computador não liga",
+        "corrections": [],
+        "excluded_terms": [],
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.02804549998836592,
+        "hits": []
+      }
+    },
+    {
+      "query": "Onde entregar o certificado depois do curso?",
+      "classification": "no_explicit_information",
+      "reason": "A fonte pede comprovante, mas não informa local de entrega.",
+      "before": {
+        "query": "Onde entregar o certificado depois do curso?",
+        "relevant": [
+          "solicitacoes_03"
+        ],
+        "targets": [
+          [
+            2,
+            0
+          ]
+        ],
+        "kind": "paraphrase",
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.022005799983162433,
+        "hits": []
+      },
+      "after": {
+        "query": "Onde entregar o certificado depois do curso?",
+        "relevant": [
+          "solicitacoes_03"
+        ],
+        "targets": [
+          [
+            2,
+            0
+          ]
+        ],
+        "kind": "paraphrase",
+        "interpreted_query": "Onde entregar o certificado depois do curso?",
+        "corrections": [],
+        "excluded_terms": [],
+        "document_recall_at_3": false,
+        "focused_at_1": false,
+        "focused_at_3": false,
+        "top1_precision": 0,
+        "rejected": true,
+        "seconds": 0.025524399999994785,
+        "hits": []
+      }
+    }
+  ],
+  "original_clean": {
+    "before": {
+      "hybrid": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 1.0,
+        "focused_at_3": 1.0,
+        "focused_result_rate": 0.8666666666666667,
+        "mean_results_per_positive_query": 1.5,
+        "top1_precision_when_returned": 0.9607948326595717,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 0.9,
+        "mean_top1_words": 14.25,
+        "mean_top1_boxes": 2.15,
+        "mean_seconds": 0.1758612566627562
+      },
+      "semantic": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 0.95,
+        "focused_at_3": 1.0,
+        "focused_result_rate": 0.8275862068965517,
+        "mean_results_per_positive_query": 1.45,
+        "top1_precision_when_returned": 0.9198165717900062,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 0.9,
+        "mean_top1_words": 12.45,
+        "mean_top1_boxes": 1.95,
+        "mean_seconds": 0.0187836266704835
+      },
+      "tfidf": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 0.85,
+        "focused_at_1": 0.75,
+        "focused_at_3": 0.8,
+        "focused_result_rate": 0.9,
+        "mean_results_per_positive_query": 1.0,
+        "top1_precision_when_returned": 0.8439018491647133,
+        "answer_rate": 0.85,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.294117647058824,
+        "mean_top1_boxes": 2.1176470588235294,
+        "mean_seconds": 0.04092163000605069
+      }
+    },
+    "after": {
+      "hybrid": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 1.0,
+        "focused_at_3": 1.0,
+        "focused_result_rate": 0.8666666666666667,
+        "mean_results_per_positive_query": 1.5,
+        "top1_precision_when_returned": 0.9607948326595717,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 14.25,
+        "mean_top1_boxes": 2.15,
+        "mean_seconds": 0.03341193333423386
+      },
+      "semantic": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 0.95,
+        "focused_at_3": 1.0,
+        "focused_result_rate": 0.8275862068965517,
+        "mean_results_per_positive_query": 1.45,
+        "top1_precision_when_returned": 0.9198165717900062,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.45,
+        "mean_top1_boxes": 1.95,
+        "mean_seconds": 0.018471963342744858
+      },
+      "tfidf": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 0.85,
+        "focused_at_1": 0.75,
+        "focused_at_3": 0.8,
+        "focused_result_rate": 0.9,
+        "mean_results_per_positive_query": 1.0,
+        "top1_precision_when_returned": 0.8439018491647133,
+        "answer_rate": 0.85,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.294117647058824,
+        "mean_top1_boxes": 2.1176470588235294,
+        "mean_seconds": 0.007234229995325829
+      }
+    }
+  },
+  "stress_clean": {
+    "before": {
+      "hybrid": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.7333333333333333,
+        "focused_at_1": 0.7333333333333333,
+        "focused_at_3": 0.7333333333333333,
+        "focused_result_rate": 0.6875,
+        "mean_results_per_positive_query": 1.0666666666666667,
+        "top1_precision_when_returned": 0.9881588999236058,
+        "answer_rate": 0.7333333333333333,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.272727272727273,
+        "mean_top1_boxes": 2.0,
+        "mean_seconds": 0.022920090914174743
+      },
+      "semantic": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.6666666666666666,
+        "focused_at_1": 0.6,
+        "focused_at_3": 0.6666666666666666,
+        "focused_result_rate": 0.6666666666666666,
+        "mean_results_per_positive_query": 1.0,
+        "top1_precision_when_returned": 0.8869747899159665,
+        "answer_rate": 0.6666666666666666,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.2,
+        "mean_top1_boxes": 1.7,
+        "mean_seconds": 0.01610602727371522
+      },
+      "tfidf": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.6666666666666666,
+        "focused_at_1": 0.6,
+        "focused_at_3": 0.6,
+        "focused_result_rate": 0.9,
+        "mean_results_per_positive_query": 0.6666666666666666,
+        "top1_precision_when_returned": 0.8869747899159665,
+        "answer_rate": 0.6666666666666666,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.8,
+        "mean_top1_boxes": 1.9,
+        "mean_seconds": 0.004623427259502932
+      }
+    },
+    "after": {
+      "hybrid": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.8666666666666667,
+        "focused_at_1": 0.8666666666666667,
+        "focused_at_3": 0.8666666666666667,
+        "focused_result_rate": 0.7222222222222222,
+        "mean_results_per_positive_query": 1.2,
+        "top1_precision_when_returned": 0.9899806076276665,
+        "answer_rate": 0.8666666666666667,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.307692307692308,
+        "mean_top1_boxes": 2.076923076923077,
+        "mean_seconds": 0.09598390909377486
+      },
+      "semantic": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.8,
+        "focused_at_1": 0.7333333333333333,
+        "focused_at_3": 0.8,
+        "focused_result_rate": 0.7058823529411765,
+        "mean_results_per_positive_query": 1.1333333333333333,
+        "top1_precision_when_returned": 0.905812324929972,
+        "answer_rate": 0.8,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.416666666666666,
+        "mean_top1_boxes": 1.8333333333333333,
+        "mean_seconds": 0.025084622725526886
+      },
+      "tfidf": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.7333333333333333,
+        "focused_at_1": 0.6666666666666666,
+        "focused_at_3": 0.6666666666666666,
+        "focused_result_rate": 0.9090909090909091,
+        "mean_results_per_positive_query": 0.7333333333333333,
+        "top1_precision_when_returned": 0.8972498090145149,
+        "answer_rate": 0.7333333333333333,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.090909090909092,
+        "mean_top1_boxes": 2.090909090909091,
+        "mean_seconds": 0.0073022727341264144
+      }
+    }
+  },
+  "policy": {
+    "semantic": {
+      "min_score": 0.2,
+      "relative_ratio": 0.85,
+      "min_relevance": -3.25,
+      "fallback_min_relevance": -8.0,
+      "min_unanchored_score": 0.5
+    },
+    "tfidf": {
+      "min_score": 0.02,
+      "relative_ratio": 0.6,
+      "min_relevance": -2.25
+    },
+    "hybrid": {
+      "rank_constant": 60,
+      "relative_ratio": 0.6,
+      "min_relevance": -3.25,
+      "relevance_bonus": 0.002,
+      "fallback_min_relevance": -8.0,
+      "origin_head_size": 3,
+      "min_unanchored_score": 0.5
+    }
+  },
+  "tests": {
+    "python_fast_passed": 136,
+    "python_real_models_passed": 2,
+    "javascript_passed": 9,
+    "ruff": "passed"
+  },
+  "library": {
+    "documents": 13,
+    "images": 13,
+    "ids_and_images_unchanged": true
+  },
+  "browser": {
+    "typo_adjustment_visible": true,
+    "preference_adjustment_visible": true,
+    "false_positive_rejected": true,
+    "console_errors": 0
+  },
+  "scope": "Documentos fictícios; mesmos textos, anotações, OCR e modelos; nenhuma informação adicionada ao benchmark original.",
+  "limitations": [
+    "Corpus sintético já inspecionado; diagnóstico/regressão, não avaliação independente.",
+    "Duas anotações positivas apenas apontam o tema, sem resposta explícita; contagem mantida.",
+    "Correção de uma edição exige candidato único; nomes desconhecidos podem ser ambíguos.",
+    "Regra de preferência cobre estruturas explícitas delimitadas, não toda negação.",
+    "TF-IDF ainda não encontra a paráfrase notebooks/computadores mesmo após corrigir digitação."
+  ]
+}

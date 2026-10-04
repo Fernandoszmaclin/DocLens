@@ -1,0 +1,1817 @@
+{
+  "generated_at": "2026-10-03T20:04:32.106686+00:00",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "device": "cpu",
+    "torch_threads": 4,
+    "versions": {
+      "easyocr": "1.7.2",
+      "torch": "2.14.1+cpu",
+      "sentence-transformers": "5.7.0",
+      "opencv-python-headless": "4.14.0.94"
+    }
+  },
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "policy": {
+    "preprocess": true,
+    "selected_on": "development",
+    "weighted_cer": {
+      "false": 0.044199802826158395,
+      "true": 0.01593821886296418
+    },
+    "document_ids": [
+      "manutencao_01",
+      "compras_01",
+      "horarios_01",
+      "solicitacoes_01"
+    ]
+  },
+  "cer_normalization": "Unicode NFC, casefold, whitespace collapse",
+  "ocr": {
+    "development": {
+      "clean": {
+        "false": {
+          "pages": 4,
+          "cer": 0.017417022674991785,
+          "mean_seconds": 8.296018124994589
+        },
+        "true": {
+          "pages": 4,
+          "cer": 0.01675977653631285,
+          "mean_seconds": 8.384480600012466
+        }
+      },
+      "degraded": {
+        "false": {
+          "pages": 4,
+          "cer": 0.07098258297732501,
+          "mean_seconds": 8.092108624987304
+        },
+        "true": {
+          "pages": 4,
+          "cer": 0.01511666118961551,
+          "mean_seconds": 8.152995899989037
+        }
+      }
+    },
+    "evaluation": {
+      "clean": {
+        "false": {
+          "pages": 8,
+          "cer": 0.018060527172144483,
+          "mean_seconds": 8.126316349989793
+        },
+        "true": {
+          "pages": 8,
+          "cer": 0.01757240481614058,
+          "mean_seconds": 8.544345300011628
+        }
+      },
+      "degraded": {
+        "false": {
+          "pages": 8,
+          "cer": 0.11112918971688904,
+          "mean_seconds": 8.47295158750785
+        },
+        "true": {
+          "pages": 8,
+          "cer": 0.012040351448096323,
+          "mean_seconds": 8.678681787503592
+        }
+      }
+    }
+  },
+  "retrieval": {
+    "reference": {
+      "tfidf": {
+        "recall_at_3_all": 0.95,
+        "recall_at_3_evaluation": 1.0,
+        "evaluation_queries": 13,
+        "total_queries": 20,
+        "mean_seconds": 0.005879164999350905,
+        "queries": [
+          {
+            "query": "Problemas nos computadores",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_03"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.022033500019460917
+          },
+          {
+            "query": "Notebooks lentos e desligando sozinhos",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.006356699974276125
+          },
+          {
+            "query": "O auditório está quente e barulhento",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.006075300043448806
+          },
+          {
+            "query": "Limpeza dos filtros do ar-condicionado",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "manutencao_02",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005729399970732629
+          },
+          {
+            "query": "A internet cai toda hora",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004694800009019673
+          },
+          {
+            "query": "Substituição do roteador central",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03",
+              "manutencao_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005911399959586561
+          },
+          {
+            "query": "Reposição de materiais",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "horarios_03",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005814999982248992
+          },
+          {
+            "query": "Estamos ficando sem papel e canetas",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "solicitacoes_03",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005314700014423579
+          },
+          {
+            "query": "Novos assentos para quem espera na recepção",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "solicitacoes_02",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.006188999977894127
+          },
+          {
+            "query": "Aquisição de mesas e cadeiras",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "compras_01",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004537699976935983
+          },
+          {
+            "query": "Equipamentos para proteger quem faz a limpeza",
+            "relevant": [
+              "compras_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "compras_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.00474110001232475
+          },
+          {
+            "query": "Mudança de expediente",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_01",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004502299998421222
+          },
+          {
+            "query": "Quando o público pode ser atendido presencialmente?",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "horarios_02",
+              "solicitacoes_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004252100014127791
+          },
+          {
+            "query": "Como marcar um encontro da equipe em uma sala?",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "compras_03",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004100300022400916
+          },
+          {
+            "query": "Agendamento na agenda compartilhada",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "manutencao_01",
+              "solicitacoes_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.003872400033287704
+          },
+          {
+            "query": "Dias em que posso pegar produtos no estoque",
+            "relevant": [
+              "horarios_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "horarios_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004409699991811067
+          },
+          {
+            "query": "Preciso de um carro e motorista para uma visita",
+            "relevant": [
+              "solicitacoes_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "compras_02",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004010799981188029
+          },
+          {
+            "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+            "relevant": [
+              "solicitacoes_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "solicitacoes_02",
+              "solicitacoes_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0039035999798215926
+          },
+          {
+            "query": "Quero fazer um curso relacionado ao meu trabalho",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "compras_02",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005279099976178259
+          },
+          {
+            "query": "Solicitação de capacitação e comprovante de conclusão",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005854400049429387
+          }
+        ]
+      },
+      "semantic": {
+        "recall_at_3_all": 0.95,
+        "recall_at_3_evaluation": 0.9230769230769231,
+        "evaluation_queries": 13,
+        "total_queries": 20,
+        "mean_seconds": 0.01536478999769315,
+        "queries": [
+          {
+            "query": "Problemas nos computadores",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01",
+              "manutencao_03",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01663829997414723
+          },
+          {
+            "query": "Notebooks lentos e desligando sozinhos",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01",
+              "compras_01",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014995599980466068
+          },
+          {
+            "query": "O auditório está quente e barulhento",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "horarios_02",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0157924999948591
+          },
+          {
+            "query": "Limpeza dos filtros do ar-condicionado",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "manutencao_02",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01726970000891015
+          },
+          {
+            "query": "A internet cai toda hora",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03",
+              "manutencao_01",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.017840600048657507
+          },
+          {
+            "query": "Substituição do roteador central",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "compras_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.01695980003569275
+          },
+          {
+            "query": "Reposição de materiais",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "compras_03",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015903100022114813
+          },
+          {
+            "query": "Estamos ficando sem papel e canetas",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "manutencao_01",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015767899982165545
+          },
+          {
+            "query": "Novos assentos para quem espera na recepção",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "horarios_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.016642000002320856
+          },
+          {
+            "query": "Aquisição de mesas e cadeiras",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "horarios_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01644740003393963
+          },
+          {
+            "query": "Equipamentos para proteger quem faz a limpeza",
+            "relevant": [
+              "compras_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "manutencao_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.016490899957716465
+          },
+          {
+            "query": "Mudança de expediente",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "horarios_01",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014178200042806566
+          },
+          {
+            "query": "Quando o público pode ser atendido presencialmente?",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "horarios_02",
+              "manutencao_01",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015582599968183786
+          },
+          {
+            "query": "Como marcar um encontro da equipe em uma sala?",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "horarios_02",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.012791399960406125
+          },
+          {
+            "query": "Agendamento na agenda compartilhada",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_02",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.011930899985600263
+          },
+          {
+            "query": "Dias em que posso pegar produtos no estoque",
+            "relevant": [
+              "horarios_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_03",
+              "compras_01",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.012865600001532584
+          },
+          {
+            "query": "Preciso de um carro e motorista para uma visita",
+            "relevant": [
+              "solicitacoes_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "solicitacoes_01",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013776799954939634
+          },
+          {
+            "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+            "relevant": [
+              "solicitacoes_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_01",
+              "solicitacoes_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014076999970711768
+          },
+          {
+            "query": "Quero fazer um curso relacionado ao meu trabalho",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_03",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015883400046732277
+          },
+          {
+            "query": "Solicitação de capacitação e comprovante de conclusão",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_01",
+              "solicitacoes_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01546209998195991
+          }
+        ]
+      }
+    },
+    "clean": {
+      "tfidf": {
+        "recall_at_3_all": 0.95,
+        "recall_at_3_evaluation": 1.0,
+        "evaluation_queries": 13,
+        "total_queries": 20,
+        "mean_seconds": 0.005158645001938566,
+        "queries": [
+          {
+            "query": "Problemas nos computadores",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_03"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.005623399978503585
+          },
+          {
+            "query": "Notebooks lentos e desligando sozinhos",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005153200007043779
+          },
+          {
+            "query": "O auditório está quente e barulhento",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.00491900002816692
+          },
+          {
+            "query": "Limpeza dos filtros do ar-condicionado",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "manutencao_02",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005340499978046864
+          },
+          {
+            "query": "A internet cai toda hora",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005165100039448589
+          },
+          {
+            "query": "Substituição do roteador central",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03",
+              "manutencao_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0049374999944120646
+          },
+          {
+            "query": "Reposição de materiais",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "horarios_03",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005153600010089576
+          },
+          {
+            "query": "Estamos ficando sem papel e canetas",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "horarios_01",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005298800009768456
+          },
+          {
+            "query": "Novos assentos para quem espera na recepção",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "solicitacoes_02",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004970500012859702
+          },
+          {
+            "query": "Aquisição de mesas e cadeiras",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "solicitacoes_01",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004949100024532527
+          },
+          {
+            "query": "Equipamentos para proteger quem faz a limpeza",
+            "relevant": [
+              "compras_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "compras_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005707399977836758
+          },
+          {
+            "query": "Mudança de expediente",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_01",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0049996000016108155
+          },
+          {
+            "query": "Quando o público pode ser atendido presencialmente?",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "horarios_02",
+              "compras_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005010600027162582
+          },
+          {
+            "query": "Como marcar um encontro da equipe em uma sala?",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "compras_03",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005108100012876093
+          },
+          {
+            "query": "Agendamento na agenda compartilhada",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "manutencao_01",
+              "solicitacoes_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005063600023277104
+          },
+          {
+            "query": "Dias em que posso pegar produtos no estoque",
+            "relevant": [
+              "horarios_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "horarios_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005121800000779331
+          },
+          {
+            "query": "Preciso de um carro e motorista para uma visita",
+            "relevant": [
+              "solicitacoes_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "compras_02",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005533199990168214
+          },
+          {
+            "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+            "relevant": [
+              "solicitacoes_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "solicitacoes_02",
+              "solicitacoes_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005162599962204695
+          },
+          {
+            "query": "Quero fazer um curso relacionado ao meu trabalho",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "solicitacoes_03",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005026899976655841
+          },
+          {
+            "query": "Solicitação de capacitação e comprovante de conclusão",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004928399983327836
+          }
+        ]
+      },
+      "semantic": {
+        "recall_at_3_all": 0.85,
+        "recall_at_3_evaluation": 0.8461538461538461,
+        "evaluation_queries": 13,
+        "total_queries": 20,
+        "mean_seconds": 0.01455185998347588,
+        "queries": [
+          {
+            "query": "Problemas nos computadores",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01",
+              "manutencao_03",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014356400002725422
+          },
+          {
+            "query": "Notebooks lentos e desligando sozinhos",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01",
+              "compras_01",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01610489998711273
+          },
+          {
+            "query": "O auditório está quente e barulhento",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "horarios_02",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014543999976012856
+          },
+          {
+            "query": "Limpeza dos filtros do ar-condicionado",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "manutencao_02",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.016251099994406104
+          },
+          {
+            "query": "A internet cai toda hora",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03",
+              "manutencao_01",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013097699964419007
+          },
+          {
+            "query": "Substituição do roteador central",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "compras_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.013494699960574508
+          },
+          {
+            "query": "Reposição de materiais",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_02",
+              "compras_01",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.011896000010892749
+          },
+          {
+            "query": "Estamos ficando sem papel e canetas",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "manutencao_01",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013747999968472868
+          },
+          {
+            "query": "Novos assentos para quem espera na recepção",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "horarios_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014805299986619502
+          },
+          {
+            "query": "Aquisição de mesas e cadeiras",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "horarios_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01475690002553165
+          },
+          {
+            "query": "Equipamentos para proteger quem faz a limpeza",
+            "relevant": [
+              "compras_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "manutencao_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014311000006273389
+          },
+          {
+            "query": "Mudança de expediente",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "horarios_01",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013081600016448647
+          },
+          {
+            "query": "Quando o público pode ser atendido presencialmente?",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "horarios_02",
+              "manutencao_01",
+              "compras_02"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.015270399977453053
+          },
+          {
+            "query": "Como marcar um encontro da equipe em uma sala?",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "solicitacoes_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013399299990851432
+          },
+          {
+            "query": "Agendamento na agenda compartilhada",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_02",
+              "compras_02"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.014831099950242788
+          },
+          {
+            "query": "Dias em que posso pegar produtos no estoque",
+            "relevant": [
+              "horarios_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_03",
+              "compras_01",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014691799995489419
+          },
+          {
+            "query": "Preciso de um carro e motorista para uma visita",
+            "relevant": [
+              "solicitacoes_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "solicitacoes_01",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014385199989192188
+          },
+          {
+            "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+            "relevant": [
+              "solicitacoes_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_01",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.016329299949575216
+          },
+          {
+            "query": "Quero fazer um curso relacionado ao meu trabalho",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "manutencao_01",
+              "horarios_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013845199951902032
+          },
+          {
+            "query": "Solicitação de capacitação e comprovante de conclusão",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "manutencao_01",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.017837299965322018
+          }
+        ]
+      }
+    },
+    "degraded": {
+      "tfidf": {
+        "recall_at_3_all": 0.95,
+        "recall_at_3_evaluation": 1.0,
+        "evaluation_queries": 13,
+        "total_queries": 20,
+        "mean_seconds": 0.005272809995221906,
+        "queries": [
+          {
+            "query": "Problemas nos computadores",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_03"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.0054493999923579395
+          },
+          {
+            "query": "Notebooks lentos e desligando sozinhos",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005063100019469857
+          },
+          {
+            "query": "O auditório está quente e barulhento",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.00582419999409467
+          },
+          {
+            "query": "Limpeza dos filtros do ar-condicionado",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "manutencao_02",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005109499965328723
+          },
+          {
+            "query": "A internet cai toda hora",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005106099997647107
+          },
+          {
+            "query": "Substituição do roteador central",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03",
+              "manutencao_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005991699988953769
+          },
+          {
+            "query": "Reposição de materiais",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "horarios_03",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.00516790000256151
+          },
+          {
+            "query": "Estamos ficando sem papel e canetas",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "compras_02",
+              "solicitacoes_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005263799976091832
+          },
+          {
+            "query": "Novos assentos para quem espera na recepção",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "solicitacoes_02",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0057978000259026885
+          },
+          {
+            "query": "Aquisição de mesas e cadeiras",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "compras_01",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0051583999884314835
+          },
+          {
+            "query": "Equipamentos para proteger quem faz a limpeza",
+            "relevant": [
+              "compras_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "compras_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0053162999683991075
+          },
+          {
+            "query": "Mudança de expediente",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "compras_01",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.00580650003394112
+          },
+          {
+            "query": "Quando o público pode ser atendido presencialmente?",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "horarios_02",
+              "solicitacoes_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005143999995198101
+          },
+          {
+            "query": "Como marcar um encontro da equipe em uma sala?",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "compras_03",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004659799975343049
+          },
+          {
+            "query": "Agendamento na agenda compartilhada",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "manutencao_01",
+              "solicitacoes_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005095100030303001
+          },
+          {
+            "query": "Dias em que posso pegar produtos no estoque",
+            "relevant": [
+              "horarios_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "horarios_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0052758000092580914
+          },
+          {
+            "query": "Preciso de um carro e motorista para uma visita",
+            "relevant": [
+              "solicitacoes_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "compras_02",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.004817800014279783
+          },
+          {
+            "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+            "relevant": [
+              "solicitacoes_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "solicitacoes_02",
+              "solicitacoes_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.00514409999595955
+          },
+          {
+            "query": "Quero fazer um curso relacionado ao meu trabalho",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "compras_02",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005041499971412122
+          },
+          {
+            "query": "Solicitação de capacitação e comprovante de conclusão",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "solicitacoes_03",
+              "solicitacoes_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.005223399959504604
+          }
+        ]
+      },
+      "semantic": {
+        "recall_at_3_all": 0.9,
+        "recall_at_3_evaluation": 0.8461538461538461,
+        "evaluation_queries": 13,
+        "total_queries": 20,
+        "mean_seconds": 0.014830909995362162,
+        "queries": [
+          {
+            "query": "Problemas nos computadores",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01",
+              "manutencao_03",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.016481600003317
+          },
+          {
+            "query": "Notebooks lentos e desligando sozinhos",
+            "relevant": [
+              "manutencao_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "manutencao_01",
+              "compras_01",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.016018399968743324
+          },
+          {
+            "query": "O auditório está quente e barulhento",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "horarios_02",
+              "compras_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015366399951744825
+          },
+          {
+            "query": "Limpeza dos filtros do ar-condicionado",
+            "relevant": [
+              "manutencao_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_02",
+              "manutencao_02",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.013970399973914027
+          },
+          {
+            "query": "A internet cai toda hora",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "manutencao_03",
+              "manutencao_01",
+              "manutencao_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01406640000641346
+          },
+          {
+            "query": "Substituição do roteador central",
+            "relevant": [
+              "manutencao_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "solicitacoes_01",
+              "compras_03"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.015187100041657686
+          },
+          {
+            "query": "Reposição de materiais",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_02",
+              "compras_01",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014265500009059906
+          },
+          {
+            "query": "Estamos ficando sem papel e canetas",
+            "relevant": [
+              "compras_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "compras_01",
+              "manutencao_01",
+              "manutencao_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014896399981807917
+          },
+          {
+            "query": "Novos assentos para quem espera na recepção",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "compras_02",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.012943000008817762
+          },
+          {
+            "query": "Aquisição de mesas e cadeiras",
+            "relevant": [
+              "compras_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_02",
+              "horarios_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015113000001292676
+          },
+          {
+            "query": "Equipamentos para proteger quem faz a limpeza",
+            "relevant": [
+              "compras_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "compras_03",
+              "manutencao_02",
+              "manutencao_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015222199959680438
+          },
+          {
+            "query": "Mudança de expediente",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "horarios_01",
+              "solicitacoes_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014526900020428002
+          },
+          {
+            "query": "Quando o público pode ser atendido presencialmente?",
+            "relevant": [
+              "horarios_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "horarios_02",
+              "manutencao_01",
+              "horarios_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.0154459000332281
+          },
+          {
+            "query": "Como marcar um encontro da equipe em uma sala?",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_02",
+              "solicitacoes_02",
+              "horarios_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01593479997245595
+          },
+          {
+            "query": "Agendamento na agenda compartilhada",
+            "relevant": [
+              "horarios_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "solicitacoes_03",
+              "compras_02"
+            ],
+            "recall_at_3": 0.0,
+            "seconds": 0.013896499993279576
+          },
+          {
+            "query": "Dias em que posso pegar produtos no estoque",
+            "relevant": [
+              "horarios_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "horarios_03",
+              "compras_01",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014931400015484542
+          },
+          {
+            "query": "Preciso de um carro e motorista para uma visita",
+            "relevant": [
+              "solicitacoes_01"
+            ],
+            "split": "development",
+            "retrieved_documents": [
+              "solicitacoes_01",
+              "solicitacoes_01",
+              "compras_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01411980000557378
+          },
+          {
+            "query": "Como conseguir permissão para abrir os arquivos da equipe?",
+            "relevant": [
+              "solicitacoes_02"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_02",
+              "solicitacoes_02",
+              "compras_01"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.015262099972460419
+          },
+          {
+            "query": "Quero fazer um curso relacionado ao meu trabalho",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "manutencao_01",
+              "horarios_03"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.01452409999910742
+          },
+          {
+            "query": "Solicitação de capacitação e comprovante de conclusão",
+            "relevant": [
+              "solicitacoes_03"
+            ],
+            "split": "evaluation",
+            "retrieved_documents": [
+              "solicitacoes_03",
+              "manutencao_01",
+              "solicitacoes_02"
+            ],
+            "recall_at_3": 1.0,
+            "seconds": 0.014446299988776445
+          }
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Corpus sintético pequeno; métricas não representam documentos reais.",
+    "Recall medido por documento relevante entre os três primeiros trechos.",
+    "Tempos não incluem download nem carregamento inicial dos modelos.",
+    "Consultas anotadas manualmente pelo autor; não houve ajuste do modelo NLP."
+  ]
+}

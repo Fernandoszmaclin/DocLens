@@ -1,0 +1,108 @@
+{
+  "experiment": "RRF + limiar de relevância, antes dos filtros de evidência e bônus positivo",
+  "generated_at": "2026-10-03T22:22:56.361748+00:00",
+  "policy": {
+    "semantic": {
+      "min_score": 0.2,
+      "relative_ratio": 0.85,
+      "min_relevance": -3.25
+    },
+    "tfidf": {
+      "min_score": 0.02,
+      "relative_ratio": 0.6,
+      "min_relevance": -2.25
+    },
+    "hybrid": {
+      "rank_constant": 60,
+      "relative_ratio": 0.6,
+      "min_relevance": -3.25
+    }
+  },
+  "clean": {
+    "hybrid": {
+      "all": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 0.85,
+        "focused_at_3": 0.95,
+        "top1_precision_when_returned": 0.8173165717900064,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 0.5,
+        "mean_top1_words": 13.1,
+        "mean_top1_boxes": 2.0,
+        "mean_seconds": 0.1144383499942099
+      },
+      "evaluation": {
+        "positive_queries": 13,
+        "negative_queries": 5,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 0.7692307692307693,
+        "focused_at_3": 0.9230769230769231,
+        "top1_precision_when_returned": 0.718948571984625,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 0.4,
+        "mean_top1_words": 14.923076923076923,
+        "mean_top1_boxes": 2.3846153846153846,
+        "mean_seconds": 0.17981271110733765
+      }
+    },
+    "semantic": {
+      "all": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 0.95,
+        "focused_at_3": 1.0,
+        "top1_precision_when_returned": 0.9198165717900062,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 0.9,
+        "mean_top1_words": 12.45,
+        "mean_top1_boxes": 1.95,
+        "mean_seconds": 0.01301872666614751
+      },
+      "evaluation": {
+        "positive_queries": 13,
+        "negative_queries": 5,
+        "document_recall_at_3": 1.0,
+        "focused_at_1": 0.9230769230769231,
+        "focused_at_3": 1.0,
+        "top1_precision_when_returned": 0.8766408796769328,
+        "answer_rate": 1.0,
+        "negative_rejection_rate": 0.8,
+        "mean_top1_words": 13.923076923076923,
+        "mean_top1_boxes": 2.3076923076923075,
+        "mean_seconds": 0.013080866667830074
+      }
+    },
+    "tfidf": {
+      "all": {
+        "positive_queries": 20,
+        "negative_queries": 10,
+        "document_recall_at_3": 0.85,
+        "focused_at_1": 0.75,
+        "focused_at_3": 0.8,
+        "top1_precision_when_returned": 0.8439018491647133,
+        "answer_rate": 0.85,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.294117647058824,
+        "mean_top1_boxes": 2.1176470588235294,
+        "mean_seconds": 0.0027381666606136907
+      },
+      "evaluation": {
+        "positive_queries": 13,
+        "negative_queries": 5,
+        "document_recall_at_3": 0.9230769230769231,
+        "focused_at_1": 0.7692307692307693,
+        "focused_at_3": 0.8461538461538461,
+        "top1_precision_when_returned": 0.7788609529833438,
+        "answer_rate": 0.9230769230769231,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 15.5,
+        "mean_top1_boxes": 2.5,
+        "mean_seconds": 0.0027343777700379076
+      }
+    }
+  },
+  "note": "Medição inicial preservada para registrar a regressão observada. Tempos incluem cache; corpus fictício já inspecionado."
+}

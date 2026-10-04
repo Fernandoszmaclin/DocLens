@@ -1,0 +1,2133 @@
+{
+  "generated_at": "2026-10-04T01:59:42.593165+00:00",
+  "description": "Consultas novas para diagnóstico: erros de digitação, paráfrases, negação, assuntos ausentes e códigos. Corpus fictício já conhecido; não avaliação independente.",
+  "policy": {
+    "semantic": {
+      "min_score": 0.2,
+      "relative_ratio": 0.85,
+      "min_relevance": -3.25,
+      "fallback_min_relevance": -8.0,
+      "min_unanchored_score": 0.5
+    },
+    "tfidf": {
+      "min_score": 0.02,
+      "relative_ratio": 0.6,
+      "min_relevance": -2.25
+    },
+    "hybrid": {
+      "rank_constant": 60,
+      "relative_ratio": 0.6,
+      "min_relevance": -3.25,
+      "relevance_bonus": 0.002,
+      "fallback_min_relevance": -8.0,
+      "origin_head_size": 3,
+      "min_unanchored_score": 0.5
+    }
+  },
+  "scope": "OCR limpo, modelos reais locais; tempos incluem cache.",
+  "results": {
+    "hybrid": {
+      "summary": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.8666666666666667,
+        "focused_at_1": 0.8666666666666667,
+        "focused_at_3": 0.8666666666666667,
+        "focused_result_rate": 0.7222222222222222,
+        "mean_results_per_positive_query": 1.2,
+        "top1_precision_when_returned": 0.9899806076276665,
+        "answer_rate": 0.8666666666666667,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.307692307692308,
+        "mean_top1_boxes": 2.076923076923077,
+        "mean_seconds": 0.09598390909377486
+      },
+      "queries": [
+        {
+          "query": "probelmas nos computdores",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "typo",
+          "interpreted_query": "problemas nos computadores",
+          "corrections": [
+            {
+              "original": "probelmas",
+              "replacement": "problemas"
+            },
+            {
+              "original": "computdores",
+              "replacement": "computadores"
+            }
+          ],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 1.2407462000264786,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados.",
+              "score": 0.016129032258064516,
+              "semantic_score": 0.5174844861030579,
+              "tfidf_score": 0.0,
+              "rrf_score": 0.016129032258064516,
+              "relevance_score": -2.7826850414276123,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Meu notebook fica lento e desliga sozinho",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Meu notebooks fica lento e desliga sozinho",
+          "corrections": [
+            {
+              "original": "notebook",
+              "replacement": "notebooks"
+            }
+          ],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.03848579997429624,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados.",
+              "score": 0.03713184545860916,
+              "semantic_score": 0.7350759506225586,
+              "tfidf_score": 0.16896511020290578,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": 2.1724801063537598,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "O computador não liga",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "negation",
+          "interpreted_query": "O computador não liga",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.02804549998836592,
+          "hits": []
+        },
+        {
+          "query": "Wi-Fi instável e conexão interrompida",
+          "relevant": [
+            "manutencao_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Wi-Fi instável e conexão interrompida",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.031184200022835284,
+          "hits": [
+            {
+              "document": "manutencao_03",
+              "text": "A conexão de internet do bloco administrativo apresenta interrupções frequentes.",
+              "score": 0.03278688524590164,
+              "semantic_score": 0.6324569582939148,
+              "tfidf_score": 0.08620557563934875,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": -3.705737352371216,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Barulho e pouco frio no ar condicionado",
+          "relevant": [
+            "manutencao_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Barulho e pouco frio no ar condicionado",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.0812640999793075,
+          "hits": [
+            {
+              "document": "manutencao_02",
+              "text": "Os aparelhos de ar-condicionado do auditório estão produzindo ruído excessivo e resfriamento insuficiente.",
+              "score": 0.03252247488101534,
+              "semantic_score": 0.5295292139053345,
+              "tfidf_score": 0.21138058879738997,
+              "rrf_score": 0.03252247488101534,
+              "relevance_score": -1.9606564044952393,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Luvas e óculos para quem limpa salas",
+          "relevant": [
+            "compras_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Luvas e óculos para quem limpa salas",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.042501899995841086,
+          "hits": [
+            {
+              "document": "compras_03",
+              "text": "equipe de conservação receberá luvas, óculos calçados de proteção adquiridos para as atividades de limpeza manutenção.",
+              "score": 0.02921395544346364,
+              "semantic_score": 0.35083967447280884,
+              "tfidf_score": 0.25589700718379516,
+              "rrf_score": 0.02921395544346364,
+              "relevance_score": -0.6056920289993286,
+              "boxes": 4,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Papel canetas e pastas acabando",
+          "relevant": [
+            "compras_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Papel canetas e pastas acabando",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.05217159999301657,
+          "hits": [
+            {
+              "document": "compras_01",
+              "text": "estoque de papel, canetas pastas está próximo do limite mínimo.",
+              "score": 0.03278688524590164,
+              "semantic_score": 0.7845308184623718,
+              "tfidf_score": 0.500779490911746,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": -1.286315679550171,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Mesas e cadeiras novas na recepção",
+          "relevant": [
+            "compras_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Mesas e cadeiras novas na recepção",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 0.9411764705882353,
+          "rejected": false,
+          "seconds": 0.03357349999714643,
+          "hits": [
+            {
+              "document": "compras_02",
+              "text": "recepção receberá novas cadeiras e mesas para melhorar 0 conforto dos visitantes e a organização do espaço.",
+              "score": 0.04078688524590164,
+              "semantic_score": 0.8363950848579407,
+              "tfidf_score": 0.2930472355939804,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": 7.276885032653809,
+              "boxes": 3,
+              "precision": 0.9411764705882353,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Qual horário de atendimento ao público?",
+          "relevant": [
+            "horarios_01"
+          ],
+          "targets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Qual horário de atendimento ao público?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.05982770002447069,
+          "hits": [
+            {
+              "document": "horarios_01",
+              "text": "atendimento presencial ao público ocorrerá das nove às quinze horas.",
+              "score": 0.04052247488101534,
+              "semantic_score": 0.7369605302810669,
+              "tfidf_score": 0.20470884760370645,
+              "rrf_score": 0.03252247488101534,
+              "relevance_score": 4.886288166046143,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Como marcar uma sala para reunião?",
+          "relevant": [
+            "horarios_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Como marcar uma sala para reunião?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.03328869998222217,
+          "hits": [
+            {
+              "document": "horarios_02",
+              "text": "As salas de reunião poderão ser utilizadas mediante agendamento prévio na agenda compartilhada.",
+              "score": 0.033546051033081545,
+              "semantic_score": 0.6871727705001831,
+              "tfidf_score": 0.24695127269201927,
+              "rrf_score": 0.03225806451612903,
+              "relevance_score": 0.6439932584762573,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            },
+            {
+              "document": "horarios_02",
+              "text": "Ao solicitar uma sala, informe a duração da atividade; 0 número de participantes e a necessidade de equipamentos de apresentação.",
+              "score": 0.03309926838458328,
+              "semantic_score": 0.48675549030303955,
+              "tfidf_score": 0.05960569549696348,
+              "rrf_score": 0.029857397504456328,
+              "relevance_score": 1.6209354400634766,
+              "boxes": 2,
+              "precision": 0.0,
+              "focused": false
+            },
+            {
+              "document": "horarios_02",
+              "text": "Reserva das salas de reunião",
+              "score": 0.03278688524590164,
+              "semantic_score": 0.8388864398002625,
+              "tfidf_score": 0.501115833574794,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": -1.8417799472808838,
+              "boxes": 1,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Até quando envio a lista para retirar itens?",
+          "relevant": [
+            "horarios_03"
+          ],
+          "targets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Até quando envio a lista para retirar itens?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 0.9285714285714286,
+          "rejected": false,
+          "seconds": 0.04790609999326989,
+          "hits": [
+            {
+              "document": "horarios_03",
+              "text": "Os setores devem encaminhar a relação de itens até 0 dia anterior à retirada.",
+              "score": 0.03853436706911733,
+              "semantic_score": 0.48487234115600586,
+              "tfidf_score": 0.13932772376368077,
+              "rrf_score": 0.032266458495966696,
+              "relevance_score": 3.1339542865753174,
+              "boxes": 1,
+              "precision": 0.9285714285714286,
+              "focused": true
+            },
+            {
+              "document": "horarios_03",
+              "text": "A retirada de materiais no almoxarifado será realizada às terças e quintas-feiras, das dez às doze horas_ 0 novo horário permitirá organizar 0 estoque e conferir os registros de movimentação.",
+              "score": 0.030886196246139225,
+              "semantic_score": 0.5464141368865967,
+              "tfidf_score": 0.04478486808737354,
+              "rrf_score": 0.030886196246139225,
+              "relevance_score": -1.7841122150421143,
+              "boxes": 4,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Veículo com motorista para atividade externa",
+          "relevant": [
+            "solicitacoes_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Veículo com motorista para atividade externa",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.049500800028909,
+          "hits": [
+            {
+              "document": "solicitacoes_01",
+              "text": "Os colaboradores que precisarem de veículo para atividades externas deverão encaminhar uma solicitação de transporte à coordenação.",
+              "score": 0.03278688524590164,
+              "semantic_score": 0.569300651550293,
+              "tfidf_score": 0.32149255451696673,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": -0.6056110262870789,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Como pedir permissão para consultar arquivos compartilhados?",
+          "relevant": [
+            "solicitacoes_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Como pedir permissão para consultar arquivos compartilhados?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.053393299982417375,
+          "hits": [
+            {
+              "document": "solicitacoes_02",
+              "text": "Novos integrantes das equipes deverão solicitar permissão para consultar a pasta compartilhada de documentos.",
+              "score": 0.04052247488101534,
+              "semantic_score": 0.653179943561554,
+              "tfidf_score": 0.2960676405585672,
+              "rrf_score": 0.03252247488101534,
+              "relevance_score": 5.12526273727417,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            },
+            {
+              "document": "solicitacoes_02",
+              "text": "Pedido de acesso à pasta compartilhada",
+              "score": 0.03252247488101534,
+              "semantic_score": 0.7219318151473999,
+              "tfidf_score": 0.18095635457773457,
+              "rrf_score": 0.03252247488101534,
+              "relevance_score": -3.6182687282562256,
+              "boxes": 1,
+              "precision": 0.0,
+              "focused": false
+            },
+            {
+              "document": "solicitacoes_02",
+              "text": "Quando houver mudança de equipe ou encerramento das atividades, gestor deverá comunicar a atualização das permissões.",
+              "score": 0.014767960904301077,
+              "semantic_score": 0.2643374502658844,
+              "tfidf_score": 0.0,
+              "rrf_score": 0.014492753623188406,
+              "relevance_score": 0.13760364055633545,
+              "boxes": 3,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Onde entregar o certificado depois do curso?",
+          "relevant": [
+            "solicitacoes_03"
+          ],
+          "targets": [
+            [
+              2,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Onde entregar o certificado depois do curso?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.025524399999994785,
+          "hits": []
+        },
+        {
+          "query": "Não quero ar-condicionado: preciso de luvas para limpeza",
+          "relevant": [
+            "compras_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "negation",
+          "interpreted_query": "preciso de luvas para limpeza",
+          "corrections": [],
+          "excluded_terms": [
+            "ar-condicionado"
+          ],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.08367150003323331,
+          "hits": [
+            {
+              "document": "compras_03",
+              "text": "equipe de conservação receberá luvas, óculos calçados de proteção adquiridos para as atividades de limpeza manutenção.",
+              "score": 0.03278688524590164,
+              "semantic_score": 0.6129281520843506,
+              "tfidf_score": 0.23335497458985893,
+              "rrf_score": 0.03278688524590164,
+              "relevance_score": -1.7070233821868896,
+              "boxes": 4,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Cardápio do refeitório de amanhã",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Cardápio do refeitório de amanhã",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.028806200018152595,
+          "hits": []
+        },
+        {
+          "query": "Resultado do campeonato de futebol",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Resultado do campeonato de futebol",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.04573589999927208,
+          "hits": []
+        },
+        {
+          "query": "Tabela de salários dos colaboradores",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Tabela de salários dos colaboradores",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.03089280001586303,
+          "hits": []
+        },
+        {
+          "query": "Valor da mensalidade do plano de saúde",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Valor da mensalidade do plano de saúde",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.029611700039822608,
+          "hits": []
+        },
+        {
+          "query": "Convocação para concurso público",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Convocação para concurso público",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.023168099985923618,
+          "hits": []
+        },
+        {
+          "query": "Como pedir férias de 30 dias?",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Como pedir férias de 30 dias?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.02948089997516945,
+          "hits": []
+        },
+        {
+          "query": "Entrega de equipamentos de proteção em dezembro de 2030",
+          "relevant": [],
+          "kind": "absent_year",
+          "interpreted_query": "Entrega de equipamentos de proteção em dezembro de 2030",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.022865100007038563,
+          "hits": []
+        }
+      ],
+      "identifiers": [
+        {
+          "query": "MANUTENCAO_01",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "kind": "identifier",
+          "passed": true,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Referência: MANUTENCAO_01 Data: 03 de outubro de 2026"
+            }
+          ]
+        },
+        {
+          "query": "MANUTENCAO-01",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "kind": "identifier",
+          "passed": true,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Referência: MANUTENCAO_01 Data: 03 de outubro de 2026"
+            }
+          ]
+        },
+        {
+          "query": "MEM-999/2026",
+          "relevant": [],
+          "kind": "identifier",
+          "passed": true,
+          "hits": []
+        },
+        {
+          "query": "MANUTENCAO_99",
+          "relevant": [],
+          "kind": "identifier",
+          "passed": true,
+          "hits": []
+        }
+      ]
+    },
+    "semantic": {
+      "summary": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.8,
+        "focused_at_1": 0.7333333333333333,
+        "focused_at_3": 0.8,
+        "focused_result_rate": 0.7058823529411765,
+        "mean_results_per_positive_query": 1.1333333333333333,
+        "top1_precision_when_returned": 0.905812324929972,
+        "answer_rate": 0.8,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.416666666666666,
+        "mean_top1_boxes": 1.8333333333333333,
+        "mean_seconds": 0.025084622725526886
+      },
+      "queries": [
+        {
+          "query": "probelmas nos computdores",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "typo",
+          "interpreted_query": "problemas nos computadores",
+          "corrections": [
+            {
+              "original": "probelmas",
+              "replacement": "problemas"
+            },
+            {
+              "original": "computdores",
+              "replacement": "computadores"
+            }
+          ],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.018182000028900802,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados.",
+              "score": 0.5174844861030579,
+              "relevance_score": -2.7826850414276123,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Meu notebook fica lento e desliga sozinho",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Meu notebooks fica lento e desliga sozinho",
+          "corrections": [
+            {
+              "original": "notebook",
+              "replacement": "notebooks"
+            }
+          ],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.020252700021956116,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados.",
+              "score": 0.7350759506225586,
+              "relevance_score": 2.1724801063537598,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "O computador não liga",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "negation",
+          "interpreted_query": "O computador não liga",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.018495600030291826,
+          "hits": []
+        },
+        {
+          "query": "Wi-Fi instável e conexão interrompida",
+          "relevant": [
+            "manutencao_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Wi-Fi instável e conexão interrompida",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.01998829998774454,
+          "hits": [
+            {
+              "document": "manutencao_03",
+              "text": "A conexão de internet do bloco administrativo apresenta interrupções frequentes.",
+              "score": 0.6324569582939148,
+              "relevance_score": -3.705737352371216,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Barulho e pouco frio no ar condicionado",
+          "relevant": [
+            "manutencao_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Barulho e pouco frio no ar condicionado",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.019935999996960163,
+          "hits": [
+            {
+              "document": "manutencao_02",
+              "text": "Os aparelhos de ar-condicionado do auditório estão produzindo ruído excessivo e resfriamento insuficiente.",
+              "score": 0.5295292139053345,
+              "relevance_score": -1.9606564044952393,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Luvas e óculos para quem limpa salas",
+          "relevant": [
+            "compras_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Luvas e óculos para quem limpa salas",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.040528299985453486,
+          "hits": []
+        },
+        {
+          "query": "Papel canetas e pastas acabando",
+          "relevant": [
+            "compras_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Papel canetas e pastas acabando",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.026537899975664914,
+          "hits": [
+            {
+              "document": "compras_01",
+              "text": "estoque de papel, canetas pastas está próximo do limite mínimo.",
+              "score": 0.7845308184623718,
+              "relevance_score": -1.286315679550171,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Mesas e cadeiras novas na recepção",
+          "relevant": [
+            "compras_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Mesas e cadeiras novas na recepção",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 0.9411764705882353,
+          "rejected": false,
+          "seconds": 0.02606409997679293,
+          "hits": [
+            {
+              "document": "compras_02",
+              "text": "recepção receberá novas cadeiras e mesas para melhorar 0 conforto dos visitantes e a organização do espaço.",
+              "score": 0.8363950848579407,
+              "relevance_score": 7.276885509490967,
+              "boxes": 3,
+              "precision": 0.9411764705882353,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Qual horário de atendimento ao público?",
+          "relevant": [
+            "horarios_01"
+          ],
+          "targets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Qual horário de atendimento ao público?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.0312559999874793,
+          "hits": [
+            {
+              "document": "horarios_01",
+              "text": "atendimento presencial ao público ocorrerá das nove às quinze horas.",
+              "score": 0.7369605302810669,
+              "relevance_score": 4.886288166046143,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Como marcar uma sala para reunião?",
+          "relevant": [
+            "horarios_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Como marcar uma sala para reunião?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": false,
+          "focused_at_3": true,
+          "top1_precision": 0.0,
+          "rejected": false,
+          "seconds": 0.025693500007037073,
+          "hits": [
+            {
+              "document": "horarios_02",
+              "text": "Reserva das salas de reunião",
+              "score": 0.8388864398002625,
+              "relevance_score": -1.8417799472808838,
+              "boxes": 1,
+              "precision": 0.0,
+              "focused": false
+            },
+            {
+              "document": "horarios_02",
+              "text": "As salas de reunião poderão ser utilizadas mediante agendamento prévio na agenda compartilhada.",
+              "score": 0.6871727705001831,
+              "relevance_score": 0.6439932584762573,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            },
+            {
+              "document": "horarios_02",
+              "text": "Ao solicitar uma sala, informe a duração da atividade; 0 número de participantes e a necessidade de equipamentos de apresentação.",
+              "score": 0.48675549030303955,
+              "relevance_score": 1.6209354400634766,
+              "boxes": 2,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Até quando envio a lista para retirar itens?",
+          "relevant": [
+            "horarios_03"
+          ],
+          "targets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Até quando envio a lista para retirar itens?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 0.9285714285714286,
+          "rejected": false,
+          "seconds": 0.026460799970664084,
+          "hits": [
+            {
+              "document": "horarios_03",
+              "text": "Os setores devem encaminhar a relação de itens até 0 dia anterior à retirada.",
+              "score": 0.48487234115600586,
+              "relevance_score": 3.1339542865753174,
+              "boxes": 1,
+              "precision": 0.9285714285714286,
+              "focused": true
+            },
+            {
+              "document": "horarios_03",
+              "text": "A retirada de materiais no almoxarifado será realizada às terças e quintas-feiras, das dez às doze horas_ 0 novo horário permitirá organizar 0 estoque e conferir os registros de movimentação.",
+              "score": 0.5464141368865967,
+              "relevance_score": -1.7841122150421143,
+              "boxes": 4,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Veículo com motorista para atividade externa",
+          "relevant": [
+            "solicitacoes_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Veículo com motorista para atividade externa",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.022525300038978457,
+          "hits": [
+            {
+              "document": "solicitacoes_01",
+              "text": "Os colaboradores que precisarem de veículo para atividades externas deverão encaminhar uma solicitação de transporte à coordenação.",
+              "score": 0.569300651550293,
+              "relevance_score": -0.6056110262870789,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Como pedir permissão para consultar arquivos compartilhados?",
+          "relevant": [
+            "solicitacoes_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Como pedir permissão para consultar arquivos compartilhados?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.046457999967969954,
+          "hits": [
+            {
+              "document": "solicitacoes_02",
+              "text": "Novos integrantes das equipes deverão solicitar permissão para consultar a pasta compartilhada de documentos.",
+              "score": 0.653179943561554,
+              "relevance_score": 5.12526273727417,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            },
+            {
+              "document": "solicitacoes_02",
+              "text": "Pedido de acesso à pasta compartilhada",
+              "score": 0.7219318151473999,
+              "relevance_score": -3.6182687282562256,
+              "boxes": 1,
+              "precision": 0.0,
+              "focused": false
+            },
+            {
+              "document": "solicitacoes_02",
+              "text": "Quando houver mudança de equipe ou encerramento das atividades, gestor deverá comunicar a atualização das permissões.",
+              "score": 0.2643374502658844,
+              "relevance_score": 0.13760364055633545,
+              "boxes": 3,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Onde entregar o certificado depois do curso?",
+          "relevant": [
+            "solicitacoes_03"
+          ],
+          "targets": [
+            [
+              2,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Onde entregar o certificado depois do curso?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.023878499981947243,
+          "hits": []
+        },
+        {
+          "query": "Não quero ar-condicionado: preciso de luvas para limpeza",
+          "relevant": [
+            "compras_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "negation",
+          "interpreted_query": "preciso de luvas para limpeza",
+          "corrections": [],
+          "excluded_terms": [
+            "ar-condicionado"
+          ],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.023273400031030178,
+          "hits": [
+            {
+              "document": "compras_03",
+              "text": "equipe de conservação receberá luvas, óculos calçados de proteção adquiridos para as atividades de limpeza manutenção.",
+              "score": 0.6129281520843506,
+              "relevance_score": -1.7070233821868896,
+              "boxes": 4,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Cardápio do refeitório de amanhã",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Cardápio do refeitório de amanhã",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.027067699993494898,
+          "hits": []
+        },
+        {
+          "query": "Resultado do campeonato de futebol",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Resultado do campeonato de futebol",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.023283699993044138,
+          "hits": []
+        },
+        {
+          "query": "Tabela de salários dos colaboradores",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Tabela de salários dos colaboradores",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.022286799969151616,
+          "hits": []
+        },
+        {
+          "query": "Valor da mensalidade do plano de saúde",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Valor da mensalidade do plano de saúde",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.02270269999280572,
+          "hits": []
+        },
+        {
+          "query": "Convocação para concurso público",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Convocação para concurso público",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.02172640000935644,
+          "hits": []
+        },
+        {
+          "query": "Como pedir férias de 30 dias?",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Como pedir férias de 30 dias?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.02219909999985248,
+          "hits": []
+        },
+        {
+          "query": "Entrega de equipamentos de proteção em dezembro de 2030",
+          "relevant": [],
+          "kind": "absent_year",
+          "interpreted_query": "Entrega de equipamentos de proteção em dezembro de 2030",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.023064900015015155,
+          "hits": []
+        }
+      ],
+      "identifiers": [
+        {
+          "query": "MANUTENCAO_01",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "kind": "identifier",
+          "passed": true,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Referência: MANUTENCAO_01 Data: 03 de outubro de 2026"
+            }
+          ]
+        },
+        {
+          "query": "MANUTENCAO-01",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "kind": "identifier",
+          "passed": true,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Referência: MANUTENCAO_01 Data: 03 de outubro de 2026"
+            }
+          ]
+        },
+        {
+          "query": "MEM-999/2026",
+          "relevant": [],
+          "kind": "identifier",
+          "passed": true,
+          "hits": []
+        },
+        {
+          "query": "MANUTENCAO_99",
+          "relevant": [],
+          "kind": "identifier",
+          "passed": true,
+          "hits": []
+        }
+      ]
+    },
+    "tfidf": {
+      "summary": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.7333333333333333,
+        "focused_at_1": 0.6666666666666666,
+        "focused_at_3": 0.6666666666666666,
+        "focused_result_rate": 0.9090909090909091,
+        "mean_results_per_positive_query": 0.7333333333333333,
+        "top1_precision_when_returned": 0.8972498090145149,
+        "answer_rate": 0.7333333333333333,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.090909090909092,
+        "mean_top1_boxes": 2.090909090909091,
+        "mean_seconds": 0.0073022727341264144
+      },
+      "queries": [
+        {
+          "query": "probelmas nos computdores",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "typo",
+          "interpreted_query": "problemas nos computadores",
+          "corrections": [
+            {
+              "original": "probelmas",
+              "replacement": "problemas"
+            },
+            {
+              "original": "computdores",
+              "replacement": "computadores"
+            }
+          ],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.011721599963493645,
+          "hits": []
+        },
+        {
+          "query": "Meu notebook fica lento e desliga sozinho",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Meu notebooks fica lento e desliga sozinho",
+          "corrections": [
+            {
+              "original": "notebook",
+              "replacement": "notebooks"
+            }
+          ],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.009598200034815818,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Os notebooks da sala de atendimento apresentam lentidão e desligamentos inesperados.",
+              "score": 0.16896511020290578,
+              "relevance_score": 2.1724801063537598,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "O computador não liga",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "negation",
+          "interpreted_query": "O computador não liga",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.005581100005656481,
+          "hits": []
+        },
+        {
+          "query": "Wi-Fi instável e conexão interrompida",
+          "relevant": [
+            "manutencao_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Wi-Fi instável e conexão interrompida",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.006704600004013628,
+          "hits": []
+        },
+        {
+          "query": "Barulho e pouco frio no ar condicionado",
+          "relevant": [
+            "manutencao_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Barulho e pouco frio no ar condicionado",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.006593600031919777,
+          "hits": [
+            {
+              "document": "manutencao_02",
+              "text": "Os aparelhos de ar-condicionado do auditório estão produzindo ruído excessivo e resfriamento insuficiente.",
+              "score": 0.21138058879738997,
+              "relevance_score": -1.9606564044952393,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Luvas e óculos para quem limpa salas",
+          "relevant": [
+            "compras_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Luvas e óculos para quem limpa salas",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.005633699998725206,
+          "hits": [
+            {
+              "document": "compras_03",
+              "text": "equipe de conservação receberá luvas, óculos calçados de proteção adquiridos para as atividades de limpeza manutenção.",
+              "score": 0.25589700718379516,
+              "relevance_score": -0.6056920289993286,
+              "boxes": 4,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Papel canetas e pastas acabando",
+          "relevant": [
+            "compras_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Papel canetas e pastas acabando",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.006353600008878857,
+          "hits": [
+            {
+              "document": "compras_01",
+              "text": "estoque de papel, canetas pastas está próximo do limite mínimo.",
+              "score": 0.500779490911746,
+              "relevance_score": -1.286315679550171,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Mesas e cadeiras novas na recepção",
+          "relevant": [
+            "compras_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Mesas e cadeiras novas na recepção",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 0.9411764705882353,
+          "rejected": false,
+          "seconds": 0.007052000029943883,
+          "hits": [
+            {
+              "document": "compras_02",
+              "text": "recepção receberá novas cadeiras e mesas para melhorar 0 conforto dos visitantes e a organização do espaço.",
+              "score": 0.2930472355939804,
+              "relevance_score": 7.276885032653809,
+              "boxes": 3,
+              "precision": 0.9411764705882353,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Qual horário de atendimento ao público?",
+          "relevant": [
+            "horarios_01"
+          ],
+          "targets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Qual horário de atendimento ao público?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.006972800008952618,
+          "hits": [
+            {
+              "document": "horarios_01",
+              "text": "atendimento presencial ao público ocorrerá das nove às quinze horas.",
+              "score": 0.20470884760370645,
+              "relevance_score": 4.886288166046143,
+              "boxes": 1,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Como marcar uma sala para reunião?",
+          "relevant": [
+            "horarios_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Como marcar uma sala para reunião?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0.0,
+          "rejected": false,
+          "seconds": 0.007760199951007962,
+          "hits": [
+            {
+              "document": "horarios_02",
+              "text": "Reserva das salas de reunião",
+              "score": 0.501115833574794,
+              "relevance_score": -1.8417799472808838,
+              "boxes": 1,
+              "precision": 0.0,
+              "focused": false
+            }
+          ]
+        },
+        {
+          "query": "Até quando envio a lista para retirar itens?",
+          "relevant": [
+            "horarios_03"
+          ],
+          "targets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Até quando envio a lista para retirar itens?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 0.9285714285714286,
+          "rejected": false,
+          "seconds": 0.006503600045107305,
+          "hits": [
+            {
+              "document": "horarios_03",
+              "text": "Os setores devem encaminhar a relação de itens até 0 dia anterior à retirada.",
+              "score": 0.13932772376368077,
+              "relevance_score": 3.1339542865753174,
+              "boxes": 1,
+              "precision": 0.9285714285714286,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Veículo com motorista para atividade externa",
+          "relevant": [
+            "solicitacoes_01"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Veículo com motorista para atividade externa",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.008266600023489445,
+          "hits": [
+            {
+              "document": "solicitacoes_01",
+              "text": "Os colaboradores que precisarem de veículo para atividades externas deverão encaminhar uma solicitação de transporte à coordenação.",
+              "score": 0.32149255451696673,
+              "relevance_score": -0.6056110262870789,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Como pedir permissão para consultar arquivos compartilhados?",
+          "relevant": [
+            "solicitacoes_02"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Como pedir permissão para consultar arquivos compartilhados?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.005917000002227724,
+          "hits": [
+            {
+              "document": "solicitacoes_02",
+              "text": "Novos integrantes das equipes deverão solicitar permissão para consultar a pasta compartilhada de documentos.",
+              "score": 0.2960676405585672,
+              "relevance_score": 5.12526273727417,
+              "boxes": 2,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Onde entregar o certificado depois do curso?",
+          "relevant": [
+            "solicitacoes_03"
+          ],
+          "targets": [
+            [
+              2,
+              0
+            ]
+          ],
+          "kind": "paraphrase",
+          "interpreted_query": "Onde entregar o certificado depois do curso?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.007372700027190149,
+          "hits": []
+        },
+        {
+          "query": "Não quero ar-condicionado: preciso de luvas para limpeza",
+          "relevant": [
+            "compras_03"
+          ],
+          "targets": [
+            [
+              0,
+              0
+            ]
+          ],
+          "kind": "negation",
+          "interpreted_query": "preciso de luvas para limpeza",
+          "corrections": [],
+          "excluded_terms": [
+            "ar-condicionado"
+          ],
+          "document_recall_at_3": true,
+          "focused_at_1": true,
+          "focused_at_3": true,
+          "top1_precision": 1.0,
+          "rejected": false,
+          "seconds": 0.006469299958553165,
+          "hits": [
+            {
+              "document": "compras_03",
+              "text": "equipe de conservação receberá luvas, óculos calçados de proteção adquiridos para as atividades de limpeza manutenção.",
+              "score": 0.23335497458985893,
+              "relevance_score": -1.7070229053497314,
+              "boxes": 4,
+              "precision": 1.0,
+              "focused": true
+            }
+          ]
+        },
+        {
+          "query": "Cardápio do refeitório de amanhã",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Cardápio do refeitório de amanhã",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.005705600022338331,
+          "hits": []
+        },
+        {
+          "query": "Resultado do campeonato de futebol",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Resultado do campeonato de futebol",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.0053681000135838985,
+          "hits": []
+        },
+        {
+          "query": "Tabela de salários dos colaboradores",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Tabela de salários dos colaboradores",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.006367299996782094,
+          "hits": []
+        },
+        {
+          "query": "Valor da mensalidade do plano de saúde",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Valor da mensalidade do plano de saúde",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.007322699995711446,
+          "hits": []
+        },
+        {
+          "query": "Convocação para concurso público",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Convocação para concurso público",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.0058126000221818686,
+          "hits": []
+        },
+        {
+          "query": "Como pedir férias de 30 dias?",
+          "relevant": [],
+          "kind": "absent",
+          "interpreted_query": "Como pedir férias de 30 dias?",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.005869699991308153,
+          "hits": []
+        },
+        {
+          "query": "Entrega de equipamentos de proteção em dezembro de 2030",
+          "relevant": [],
+          "kind": "absent_year",
+          "interpreted_query": "Entrega de equipamentos de proteção em dezembro de 2030",
+          "corrections": [],
+          "excluded_terms": [],
+          "document_recall_at_3": false,
+          "focused_at_1": false,
+          "focused_at_3": false,
+          "top1_precision": 0,
+          "rejected": true,
+          "seconds": 0.01570340001489967,
+          "hits": []
+        }
+      ],
+      "identifiers": [
+        {
+          "query": "MANUTENCAO_01",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "kind": "identifier",
+          "passed": true,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Referência: MANUTENCAO_01 Data: 03 de outubro de 2026"
+            }
+          ]
+        },
+        {
+          "query": "MANUTENCAO-01",
+          "relevant": [
+            "manutencao_01"
+          ],
+          "kind": "identifier",
+          "passed": true,
+          "hits": [
+            {
+              "document": "manutencao_01",
+              "text": "Referência: MANUTENCAO_01 Data: 03 de outubro de 2026"
+            }
+          ]
+        },
+        {
+          "query": "MEM-999/2026",
+          "relevant": [],
+          "kind": "identifier",
+          "passed": true,
+          "hits": []
+        },
+        {
+          "query": "MANUTENCAO_99",
+          "relevant": [],
+          "kind": "identifier",
+          "passed": true,
+          "hits": []
+        }
+      ]
+    }
+  }
+}

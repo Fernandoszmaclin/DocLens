@@ -1,0 +1,195 @@
+{
+  "generated_at": "2026-10-03T23:39:41.549548+00:00",
+  "tests": {
+    "python_fast_passed": 109,
+    "python_real_models_passed": 1,
+    "javascript_passed": 8,
+    "ruff": "passed"
+  },
+  "upload_mutations": {
+    "seed": 20261003,
+    "cases": 120,
+    "status_counts": {
+      "422": 92,
+      "201": 28
+    },
+    "failures": [],
+    "scope": "Bytes truncados ou alterados de fixtures fictícias; OCR simulado; banco temporário."
+  },
+  "stress_before_last_search_changes": {
+    "hybrid": {
+      "positive_queries": 15,
+      "negative_queries": 7,
+      "document_recall_at_3": 0.7333333333333333,
+      "focused_at_1": 0.7333333333333333,
+      "focused_at_3": 0.7333333333333333,
+      "focused_result_rate": 0.6875,
+      "mean_results_per_positive_query": 1.0666666666666667,
+      "top1_precision_when_returned": 0.9881588999236058,
+      "answer_rate": 0.7333333333333333,
+      "negative_rejection_rate": 0.8571428571428571,
+      "mean_top1_words": 13.272727272727273,
+      "mean_top1_boxes": 2.0,
+      "mean_seconds": 0.3934873136379544
+    },
+    "semantic": {
+      "positive_queries": 15,
+      "negative_queries": 7,
+      "document_recall_at_3": 0.6666666666666666,
+      "focused_at_1": 0.6,
+      "focused_at_3": 0.6666666666666666,
+      "focused_result_rate": 0.6666666666666666,
+      "mean_results_per_positive_query": 1.0,
+      "top1_precision_when_returned": 0.8869747899159665,
+      "answer_rate": 0.6666666666666666,
+      "negative_rejection_rate": 0.8571428571428571,
+      "mean_top1_words": 12.2,
+      "mean_top1_boxes": 1.7,
+      "mean_seconds": 0.23025849090878514
+    },
+    "tfidf": {
+      "positive_queries": 15,
+      "negative_queries": 7,
+      "document_recall_at_3": 0.6666666666666666,
+      "focused_at_1": 0.6,
+      "focused_at_3": 0.6,
+      "focused_result_rate": 0.9,
+      "mean_results_per_positive_query": 0.6666666666666666,
+      "top1_precision_when_returned": 0.8869747899159665,
+      "answer_rate": 0.6666666666666666,
+      "negative_rejection_rate": 0.8571428571428571,
+      "mean_top1_words": 12.8,
+      "mean_top1_boxes": 1.9,
+      "mean_seconds": 0.07761498181869021
+    }
+  },
+  "stress_after": {
+    "hybrid": {
+      "summary": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.7333333333333333,
+        "focused_at_1": 0.7333333333333333,
+        "focused_at_3": 0.7333333333333333,
+        "focused_result_rate": 0.6875,
+        "mean_results_per_positive_query": 1.0666666666666667,
+        "top1_precision_when_returned": 0.9881588999236058,
+        "answer_rate": 0.7333333333333333,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 13.272727272727273,
+        "mean_top1_boxes": 2.0,
+        "mean_seconds": 0.022920090914174743
+      },
+      "identifiers_passed": 4,
+      "identifiers_total": 4
+    },
+    "semantic": {
+      "summary": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.6666666666666666,
+        "focused_at_1": 0.6,
+        "focused_at_3": 0.6666666666666666,
+        "focused_result_rate": 0.6666666666666666,
+        "mean_results_per_positive_query": 1.0,
+        "top1_precision_when_returned": 0.8869747899159665,
+        "answer_rate": 0.6666666666666666,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.2,
+        "mean_top1_boxes": 1.7,
+        "mean_seconds": 0.01610602727371522
+      },
+      "identifiers_passed": 4,
+      "identifiers_total": 4
+    },
+    "tfidf": {
+      "summary": {
+        "positive_queries": 15,
+        "negative_queries": 7,
+        "document_recall_at_3": 0.6666666666666666,
+        "focused_at_1": 0.6,
+        "focused_at_3": 0.6,
+        "focused_result_rate": 0.9,
+        "mean_results_per_positive_query": 0.6666666666666666,
+        "top1_precision_when_returned": 0.8869747899159665,
+        "answer_rate": 0.6666666666666666,
+        "negative_rejection_rate": 1.0,
+        "mean_top1_words": 12.8,
+        "mean_top1_boxes": 1.9,
+        "mean_seconds": 0.004623427259502932
+      },
+      "identifiers_passed": 4,
+      "identifiers_total": 4
+    }
+  },
+  "original_queries_clean": {
+    "hybrid": {
+      "positive_queries": 20,
+      "negative_queries": 10,
+      "document_recall_at_3": 1.0,
+      "focused_at_1": 1.0,
+      "focused_at_3": 1.0,
+      "focused_result_rate": 0.8666666666666667,
+      "mean_results_per_positive_query": 1.5,
+      "top1_precision_when_returned": 0.9607948326595717,
+      "answer_rate": 1.0,
+      "negative_rejection_rate": 0.9,
+      "mean_top1_words": 14.25,
+      "mean_top1_boxes": 2.15,
+      "mean_seconds": 0.1758612566627562
+    },
+    "semantic": {
+      "positive_queries": 20,
+      "negative_queries": 10,
+      "document_recall_at_3": 1.0,
+      "focused_at_1": 0.95,
+      "focused_at_3": 1.0,
+      "focused_result_rate": 0.8275862068965517,
+      "mean_results_per_positive_query": 1.45,
+      "top1_precision_when_returned": 0.9198165717900062,
+      "answer_rate": 1.0,
+      "negative_rejection_rate": 0.9,
+      "mean_top1_words": 12.45,
+      "mean_top1_boxes": 1.95,
+      "mean_seconds": 0.0187836266704835
+    },
+    "tfidf": {
+      "positive_queries": 20,
+      "negative_queries": 10,
+      "document_recall_at_3": 0.85,
+      "focused_at_1": 0.75,
+      "focused_at_3": 0.8,
+      "focused_result_rate": 0.9,
+      "mean_results_per_positive_query": 1.0,
+      "top1_precision_when_returned": 0.8439018491647133,
+      "answer_rate": 0.85,
+      "negative_rejection_rate": 1.0,
+      "mean_top1_words": 13.294117647058824,
+      "mean_top1_boxes": 2.1176470588235294,
+      "mean_seconds": 0.04092163000605069
+    }
+  },
+  "library": {
+    "document_count": 13,
+    "image_count": 13,
+    "index_version": "v4",
+    "document_ids_and_page_images_unchanged": true,
+    "backup_created": true
+  },
+  "browser": {
+    "all_three_modes_verified": true,
+    "absent_year_rejected": true,
+    "empty_search_clears_highlights": true,
+    "console_errors": 0,
+    "highlight_viewbox_matches_image": [
+      1240,
+      1754
+    ]
+  },
+  "limitations": [
+    "Corpus sintético pequeno já inspecionado; diagnóstico, não validação independente.",
+    "Fuzz usa OCR simulado e apenas 120 mutações; não demonstra ausência de falhas.",
+    "As quatro consultas positivas sem resultado permanecem publicadas.",
+    "Uma consulta sem resposta do conjunto original ainda retorna trecho indevido."
+  ]
+}

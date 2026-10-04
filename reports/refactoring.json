@@ -1,0 +1,83 @@
+{
+  "scope": "Biblioteca local de 13 documentos e 150 passagens; modelos locais em CPU, aquecidos; uma consulta fixa; sem cache de consultas ou reranking.",
+  "query": "Problemas nos computadores",
+  "methodology": {
+    "warmups": 3,
+    "read_repeats": 60,
+    "search_repeats": 30,
+    "clock": "time.perf_counter",
+    "memory": "Pico de alocações Python via tracemalloc; não inclui memória nativa de PyTorch/NumPy."
+  },
+  "tests": {
+    "python": 145,
+    "frontend": 9,
+    "ruff": "passed"
+  },
+  "parity": {
+    "openapi": "exact",
+    "library": "exact",
+    "search_evaluations": "exact",
+    "diagnostic_commands": 7,
+    "frontend_snapshots": 9,
+    "original_protected_files": 75,
+    "evaluation_volatile_fields_ignored": [
+      "generated_at",
+      "seconds",
+      "mean_seconds"
+    ]
+  },
+  "metrics": {
+    "read": {
+      "before": {
+        "median_ms": 13.740549999056384,
+        "peak_python_bytes": 966878,
+        "repeats": 60
+      },
+      "after": {
+        "median_ms": 7.5488500006031245,
+        "peak_python_bytes": 1093734,
+        "repeats": 60
+      },
+      "time_reduction_percent": 45.06151499669567
+    },
+    "hybrid": {
+      "before": {
+        "median_ms": 586.9057500094641,
+        "peak_python_bytes": 1226122,
+        "repeats": 30
+      },
+      "after": {
+        "median_ms": 554.5023000158835,
+        "peak_python_bytes": 1216970,
+        "repeats": 30
+      },
+      "time_reduction_percent": 5.521065348747745
+    },
+    "semantic": {
+      "before": {
+        "median_ms": 616.6005499835592,
+        "peak_python_bytes": 1225858,
+        "repeats": 30
+      },
+      "after": {
+        "median_ms": 559.5118000055663,
+        "peak_python_bytes": 1216706,
+        "repeats": 30
+      },
+      "time_reduction_percent": 9.258627806854058
+    },
+    "tfidf": {
+      "before": {
+        "median_ms": 46.24950001016259,
+        "peak_python_bytes": 966878,
+        "repeats": 30
+      },
+      "after": {
+        "median_ms": 37.038450012914836,
+        "peak_python_bytes": 1093734,
+        "repeats": 30
+      },
+      "time_reduction_percent": 19.915999081554993
+    }
+  }
+}

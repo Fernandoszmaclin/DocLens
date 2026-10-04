@@ -1,0 +1,18 @@
+{
+  "scope": "Biblioteca local atual; tempos HTTP com modelos aquecidos, sem cache de reranking. Não mede qualidade nem inclui carga inicial de modelos.",
+  "methods": {
+    "semantic": {
+      "queries": 5,
+      "mean_seconds": 0.5967554199858569,
+      "min_seconds": 0.19926099997246638,
+      "max_seconds": 0.8951284000067972
+    },
+    "tfidf": {
+      "queries": 5,
+      "mean_seconds": 0.16049706001067535,
+      "min_seconds": 0.07121689995983616,
+      "max_seconds": 0.4275774000561796
+    }
+  },
+  "document_count": 13
+}

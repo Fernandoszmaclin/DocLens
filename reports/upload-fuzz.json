@@ -1,0 +1,10 @@
+{
+  "seed": 20261003,
+  "cases": 120,
+  "status_counts": {
+    "422": 92,
+    "201": 28
+  },
+  "failures": [],
+  "scope": "Bytes truncados ou alterados de fixtures fictícias; OCR simulado; banco temporário."
+}
