@@ -40,6 +40,14 @@ const deferred = () => {
   const promise = new Promise((resolve) => { complete = resolve; });
   return { promise, complete };
 };
+const memoryStorage = () => {
+  const values = new Map();
+  return {
+    getItem: (key) => values.get(key) ?? null,
+    setItem: (key, value) => values.set(key, value),
+    removeItem: (key) => values.delete(key),
+  };
+};
 const documentData = (id) => ({
   id, filename: `${id}.png`, duration_seconds: 1, preprocess: false, page_count: 2,
   pages: [1, 2].map((number) => ({
@@ -52,7 +60,7 @@ const hit = (id) => ({
   text: `Trecho ${id}`, score: 0.02, boxes,
 });
 
-async function app(fetcher) {
+async function app(fetcher, localStorage) {
   const nodes = new Map();
   const modes = ['hybrid', 'semantic', 'tfidf'].map((mode) => {
     const node = new Element();
@@ -78,7 +86,7 @@ async function app(fetcher) {
     createTextNode: (text) => ({ textContent: text }),
   };
   const context = vm.createContext({
-    document, AbortController,
+    document, AbortController, localStorage,
     fetch: (url, options) => url === '/documents' ? Promise.resolve(response([])) : fetcher(url, options),
   });
   vm.runInContext(readFileSync(resolve(__dirname, '../static/app.js'), 'utf8'), context);
@@ -204,4 +212,22 @@ test('ajustes de consulta ficam visíveis sem substituir a consulta original', a
   assert.equal(note.className, 'query-adjustment');
   assert.equal(note.textContent, `Busca ajustada: “${interpreted}”.`);
   assert.equal(note.children[0].textContent, ' Tema excluído: ar-condicionado.');
+});
+
+test('buscas concluídas podem ser reutilizadas ou limpas', async () => {
+  const storage = memoryStorage();
+  const ui = await app(() => response({ results: [] }), storage);
+  ui.element('#query').value = 'consulta recente';
+  await ui.run('search()');
+
+  assert.deepEqual(
+    JSON.parse(storage.getItem('doclens.recent-searches')),
+    ['consulta recente'],
+  );
+  assert.equal(ui.element('#recent-searches').hidden, false);
+  assert.equal(ui.element('#recent-search-list').children[0].textContent, 'consulta recente');
+
+  ui.element('#clear-recent-searches').listeners.click();
+  assert.equal(storage.getItem('doclens.recent-searches'), null);
+  assert.equal(ui.element('#recent-searches').hidden, true);
 });

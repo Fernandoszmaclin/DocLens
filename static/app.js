@@ -26,6 +26,66 @@ const searchModes = {
     hint: "Compara palavras e verifica a relação com a consulta completa.",
   },
 };
+const RECENT_SEARCHES_KEY = "doclens.recent-searches";
+const MAX_RECENT_SEARCHES = 5;
+
+function recentSearches() {
+  try {
+    const stored = globalThis.localStorage?.getItem(RECENT_SEARCHES_KEY);
+    const searches = JSON.parse(stored || "[]");
+    if (!Array.isArray(searches)) return [];
+    return searches
+      .filter((query) => typeof query === "string" && query.trim())
+      .map((query) => query.trim())
+      .slice(0, MAX_RECENT_SEARCHES);
+  } catch {
+    return [];
+  }
+}
+
+function renderRecentSearches() {
+  const searches = recentSearches();
+  const section = $("#recent-searches");
+  const list = $("#recent-search-list");
+  list.replaceChildren();
+  for (const query of searches) {
+    const button = el("button", "recent-search", query);
+    button.type = "button";
+    button.addEventListener("click", () => {
+      $("#query").value = query;
+      search();
+    });
+    list.append(button);
+  }
+  section.hidden = searches.length === 0;
+  $("#clear-recent-searches").hidden = searches.length === 0;
+}
+
+function rememberSearch(query) {
+  const normalized = query.toLocaleLowerCase("pt-BR");
+  const searches = [
+    query,
+    ...recentSearches().filter(
+      (previous) => previous.toLocaleLowerCase("pt-BR") !== normalized,
+    ),
+  ].slice(0, MAX_RECENT_SEARCHES);
+  try {
+    globalThis.localStorage?.setItem(RECENT_SEARCHES_KEY, JSON.stringify(searches));
+  } catch {
+    // A busca funciona mesmo que o navegador bloqueie o armazenamento local.
+  }
+  renderRecentSearches();
+}
+
+function clearRecentSearches() {
+  try {
+    globalThis.localStorage?.removeItem(RECENT_SEARCHES_KEY);
+  } catch {
+    // Sem armazenamento local, a área já permanece vazia.
+  }
+  renderRecentSearches();
+}
+
 const icon = (name, extra = "") => {
   const element = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   element.setAttribute("class", `icon ${extra}`);
@@ -304,6 +364,7 @@ async function search() {
       })
     ).json();
     if (version !== state.searchVersion) return;
+    rememberSearch(query);
     const results = $("#results");
     results.replaceChildren();
     renderSearchSummary(data, query, method);
@@ -365,11 +426,7 @@ for (const button of document.querySelectorAll(".mode"))
     $("#method-hint").textContent = searchModes[state.mode].hint;
     if ($("#query").value.trim()) search();
   });
-for (const button of document.querySelectorAll("[data-query]"))
-  button.addEventListener("click", () => {
-    $("#query").value = button.dataset.query;
-    search();
-  });
+$("#clear-recent-searches").addEventListener("click", clearRecentSearches);
 $("#page-select").addEventListener("change", (event) => {
   ++state.previewVersion;
   state.page = Number(event.target.value);
@@ -398,3 +455,4 @@ loadLibrary().catch(() =>
     "error",
   ),
 );
+renderRecentSearches();

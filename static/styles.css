@@ -529,25 +529,36 @@ h1 > span {
   color: #919a8d;
   margin: 0;
 }
-.suggestions {
+.recent-searches {
   display: flex;
   align-items: center;
   gap: 7px;
   margin-top: 13px;
   flex-wrap: wrap;
 }
-.suggestions > span {
+.recent-searches > span {
   font-size: 10px;
   color: #8c9686;
   margin-right: 4px;
 }
-.suggestions button {
+.recent-search-list {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.recent-search,
+.clear-history {
   border: 1px solid #e2e7dd;
   border-radius: 20px;
   padding: 4px 9px;
   background: transparent;
   color: #88947e;
   font-size: 10px;
+}
+.clear-history {
+  border: 0;
+  padding-inline: 3px;
+  text-decoration: underline;
 }
 .explorer {
   display: grid;
@@ -910,9 +921,12 @@ footer {
   .nav-item:hover {
     background: #f5f7f1;
   }
-  .suggestions button:hover {
+  .recent-search:hover {
     border-color: #afc29a;
     background: #f0f5e9;
+  }
+  .clear-history:hover {
+    color: #255e43;
   }
   .document-row:hover {
     background: #f6f9f0;
