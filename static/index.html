@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#255e43" />
+    <title>DocLens · Seus documentos, em foco</title>
+    <link rel="icon" href="/static/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#query">Ir para a busca</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="m16 16 4.5 4.5" />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+        <path d="M14 3v6h6M8 13h8M8 17h5" />
+      </symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24">
+        <path
+          d="M12 16V3m-5 5 5-5 5 5M4 15v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"
+        />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <path d="m12 3 10 5-10 5L2 8zm-10 9 10 5 10-5M2 16l10 5 10-5" />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="i-info" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 11v6M12 7h.01" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m9 5 7 7-7 7" />
+      </symbol>
+    </svg>
+    <aside class="sidebar">
+      <a href="/" class="brand" aria-label="DocLens, início"
+        ><img src="/static/logo.svg" alt="" width="36" height="36" /><span
+          >DocLens<span class="brand-dot">.</span></span
+        ></a
+      >
+      <div class="workspace-label">SEU ESPAÇO DE TRABALHO</div>
+      <nav aria-label="Navegação principal">
+        <a class="nav-item active" href="#workspace" aria-current="page"
+          ><svg class="icon"><use href="#i-layers" /></svg>Explorar
+          documentos<span id="nav-count" class="count">0</span></a
+        >
+        <a class="nav-item" href="/docs" target="_blank" rel="noopener"
+          ><svg class="icon"><use href="#i-file" /></svg>Documentação da API<svg
+            class="icon small"
+          >
+            <use href="#i-arrow" /></svg
+        ></a>
+      </nav>
+      <div class="sidebar-note">
+        <div class="note-symbol">Aa</div>
+        <strong>Do arquivo à descoberta.</strong>
+        <p>
+          Transforme documentos em texto pesquisável e encontre conexões entre
+          palavras.
+        </p>
+        <div class="mini-tags">
+          <span>Visão computacional</span><span>NLP</span>
+        </div>
+      </div>
+      <div class="local-note">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Processamento local</strong
+          ><span>Seus arquivos ficam neste computador.</span>
+        </div>
+      </div>
+    </aside>
+    <div class="shell">
+      <header class="topbar">
+        <span
+          >Workspace <span class="breadcrumb-slash">/</span>
+          <strong>Documentos</strong></span
+        ><span class="local-badge"
+          ><span class="status-dot"></span>Local · CPU</span
+        >
+      </header>
+      <main id="workspace">
+        <div class="heading-row">
+          <div>
+            <div class="eyebrow">LEIA ALÉM DAS PALAVRAS</div>
+            <h1>Seus documentos, em foco<span>.</span></h1>
+            <p class="lead">
+              Encontre o que precisa, mesmo quando as palavras são diferentes.
+            </p>
+          </div>
+          <div class="project-badge">
+            <svg class="icon"><use href="#i-eye" /></svg
+            ><span>OCR + busca híbrida</span>
+          </div>
+        </div>
+        <section
+          id="dropzone"
+          class="upload-card"
+          aria-labelledby="upload-title"
+        >
+          <div class="upload-symbol">
+            <svg class="icon"><use href="#i-upload" /></svg>
+          </div>
+          <div class="upload-copy">
+            <h2 id="upload-title">Dê uma nova perspectiva aos seus arquivos</h2>
+            <p>Arraste um documento aqui ou escolha um arquivo para começar.</p>
+            <span>PNG, JPEG ou PDF · Até 10 MB · Até 5 páginas</span>
+          </div>
+          <div class="upload-actions">
+            <button id="upload-button" class="button primary">
+              <svg class="icon"><use href="#i-upload" /></svg>Adicionar
+              documento</button
+            ><button id="demo-button" class="text-button">
+              Testar com um exemplo <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <input
+            id="file-input"
+            type="file"
+            accept=".png,.jpg,.jpeg,.pdf"
+            hidden
+            aria-label="Selecionar documento"
+          />
+        </section>
+        <div
+          id="notice"
+          class="notice"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+        <section class="search-section" aria-label="Buscar nos documentos">
+          <form id="search-form">
+            <label class="sr-only" for="query"
+              >O que você quer encontrar?</label
+            >
+            <div class="search-input-wrap">
+              <svg class="icon"><use href="#i-search" /></svg
+              ><input
+                id="query"
+                name="query"
+                maxlength="500"
+                placeholder="O que você quer encontrar nos seus documentos?"
+                autocomplete="off"
+              /><kbd aria-hidden="true">Enter ↵</kbd>
+            </div>
+            <button id="search-button" class="button primary" type="submit">
+              Buscar<svg class="icon"><use href="#i-arrow" /></svg>
+            </button>
+          </form>
+          <div class="search-options">
+            <div class="segmented" role="group" aria-label="Método de busca">
+              <button
+                type="button"
+                class="mode active"
+                data-mode="hybrid"
+                aria-pressed="true"
+              >
+                Híbrida<span class="mode-tag">Padrão</span></button
+              ><button
+                type="button"
+                class="mode"
+                data-mode="semantic"
+                aria-pressed="false"
+              >
+                Por significado<span class="mode-tag">NLP</span></button
+              ><button
+                type="button"
+                class="mode"
+                data-mode="tfidf"
+                aria-pressed="false"
+              >
+                Por palavras<span class="mode-tag">TF-IDF</span>
+              </button>
+            </div>
+            <p id="method-hint">
+              Combina significado e palavras para encontrar trechos relevantes.
+            </p>
+          </div>
+          <div class="suggestions">
+            <span>Experimente</span
+            ><button type="button" data-query="Problemas nos computadores">
+              Problemas nos computadores</button
+            ><button type="button" data-query="Reposição de materiais">
+              Reposição de materiais</button
+            ><button type="button" data-query="Mudança de expediente">
+              Mudança de expediente
+            </button>
+          </div>
+        </section>
+        <section class="explorer" aria-label="Biblioteca e resultados">
+          <div class="panel library-panel">
+            <div class="panel-heading">
+              <h2>Biblioteca</h2>
+              <span id="library-count" class="count">0</span>
+            </div>
+            <p class="panel-subtitle">Documentos prontos para explorar</p>
+            <div id="document-list">
+              <div class="empty library-empty">
+                <div class="empty-icon">
+                  <svg class="icon"><use href="#i-file" /></svg>
+                </div>
+                <strong>Uma nova biblioteca</strong>
+                <p>
+                  Adicione seu primeiro documento ou teste o exemplo fictício.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel results-panel">
+            <div class="panel-heading">
+              <h2>Resultados da busca</h2>
+              <span id="result-count" class="muted"></span>
+            </div>
+            <p id="results-subtitle" class="panel-subtitle">
+              Cada descoberta leva ao trecho original.
+            </p>
+            <div id="results">
+              <div class="empty result-empty">
+                <div class="empty-icon">
+                  <svg class="icon"><use href="#i-search" /></svg>
+                </div>
+                <strong>O próximo achado começa aqui</strong>
+                <p>
+                  Busque um assunto para encontrar trechos relacionados nos seus
+                  documentos.
+                </p>
+                <span class="empty-caption"
+                  >Consulte o texto. Confira a fonte.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="panel preview-panel">
+            <div class="panel-heading">
+              <h2>Documento em foco</h2>
+              <svg class="icon muted"><use href="#i-eye" /></svg>
+            </div>
+            <p id="preview-subtitle" class="panel-subtitle">
+              Selecione um documento ou resultado.
+            </p>
+            <div id="preview-empty" class="empty preview-empty">
+              <div class="paper-illustration" aria-hidden="true">
+                <div class="paper-mark"></div>
+                <i></i><i></i><i></i>
+                <div class="paper-highlight"><i></i><i></i></div>
+                <i></i><i></i>
+              </div>
+              <strong>Veja de onde veio a informação</strong>
+              <p>O trecho encontrado aparece destacado na página de origem.</p>
+            </div>
+            <div id="preview-content" hidden>
+              <div class="preview-toolbar">
+                <label for="page-select">Página</label
+                ><select
+                  id="page-select"
+                  aria-label="Selecionar página"
+                ></select
+                ><span id="processing-time" class="muted"></span>
+              </div>
+              <div class="page-scroll">
+                <div class="page-stage">
+                  <img
+                    id="page-image"
+                    alt="Página processada do documento selecionado"
+                  /><svg
+                    id="highlights"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  ></svg>
+                </div>
+              </div>
+              <details class="extracted">
+                <summary>
+                  Ver texto reconhecido <span aria-hidden="true">↗</span>
+                </summary>
+                <pre id="extracted-text"></pre>
+              </details>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <span
+            >DocLens <span class="footer-dot">·</span> Documentos
+            administrativos em português</span
+          ><span>Confira a fonte. Pontuações não são probabilidade de acerto.</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
