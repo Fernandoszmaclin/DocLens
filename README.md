@@ -9,8 +9,6 @@ Este projeto de portfólio combina **Python, visão computacional, NLP e desenvo
 Os modelos são pré-treinados; a contribuição do projeto está na integração, no tratamento de
 imagens, na preservação das fontes e na avaliação reproduzível.
 
-![DocLens com busca híbrida e uma frase destacada na página](docs/hybrid-search.jpg)
-
 ## O que funciona
 
 - Upload de PNG, JPEG e PDF: até 10 MB, cinco páginas e 25 megapixels por imagem.
@@ -118,34 +116,13 @@ recebe 409. Erros esperados usam mensagens em português: limite de tamanho (413
 incompatível (415), arquivo inválido/sem texto (422) e falha ao carregar modelos (503).
 Usar uma única instância/worker: a aplicação foi projetada para uso local por uma pessoa.
 
-## Segurança local
-
-A API aceita apenas clientes loopback e hosts `localhost`, `127.0.0.1` e `::1`. Requisições
-com `Origin` externo ou `null` são rejeitadas; POSTs de navegador devem ser da mesma origem.
-Clientes locais de terminal podem omitir esses cabeçalhos. `--no-proxy-headers` preserva o
-endereço real do cliente. A aplicação não oferece autenticação nem acesso pela rede.
-
-O corpo é limitado durante o recebimento: 10 MiB de arquivo, mais 64 KiB de overhead
-multipart, ou 64 KiB de JSON. O upload aceita um arquivo `file` e nenhum campo adicional.
-Há prazo total de 30 segundos para enviar o corpo (`408`), uma vaga de upload e duas de
-busca (`409` quando ocupadas). Cancelar a requisição não libera a vaga de um worker que
-ainda esteja executando. Os limites existentes de páginas e pixels continuam aplicados.
-
-Os modelos não são baixados durante uploads ou buscas. Snapshots ausentes ou pesos OCR
-sem o SHA-256 autorizado falham com `503`; execute o comando de preparação para reparar
-o cache. Mantenha o manifesto distribuído com o projeto: a preparação não autoriza hashes
-novos automaticamente. A verificação ocorre antes da desserialização dos pesos OCR.
-
-Respostas incluem CSP, `nosniff` e bloqueio de enquadramento. Documentos, consultas e prévias
-usam `Cache-Control: no-store`. `/docs` e `/redoc` mantêm seus assets externos, fixados por
-versão e integridade SRI, e seus scripts exigem nonce; essas páginas precisam de internet.
+## Busca
 
 O modo híbrido recupera até 30 candidatos por método, reúne passagens iguais e combina suas
 posições com Reciprocal Rank Fusion (RRF), com pesos iguais e constante 60. A união permite
 encontrar paráfrases mesmo sem sobreposição de palavras. Até 30 candidatos passam pelo
 verificador local; um bônus limitado de relevância favorece frases específicas. A fusão
-preserva texto e coordenadas de cada passagem e não amplia os destaques. Veja as decisões
-em [docs/hybrid-search.md](docs/hybrid-search.md).
+preserva texto e coordenadas de cada passagem e não amplia os destaques.
 
 O método semântico recupera candidatos por embeddings e combina cosseno com uma verificação
 de relevância da consulta completa. O modo por palavras usa TF-IDF com normalização de acentos,
@@ -231,33 +208,6 @@ métodos permanecem disponíveis para investigar seus comportamentos.
 Os testes rápidos usam doubles dos modelos para verificar contratos HTTP, erros e persistência
 sem rede. O teste `models` e a avaliação usam as redes reais. Os documentos e as consultas são
 sintéticos: desempenho neste conjunto pequeno não demonstra precisão em documentos reais.
-
-## Decisões e aprendizado
-
-Leia [docs/decisions.md](docs/decisions.md) para entender alternativas, escolhas e consequências;
-[docs/learning-guide.md](docs/learning-guide.md) oferece exercícios para explorar o código.
-As correções da busca e seus motivos estão em
-[docs/search-improvements.md](docs/search-improvements.md); a combinação dos métodos está em
-[docs/hybrid-search.md](docs/hybrid-search.md).
-As correções de robustez estão explicadas em [docs/hardening.md](docs/hardening.md).
-
-O roteiro de demonstração está em [docs/video-script.md](docs/video-script.md), e o texto
-para LinkedIn em [docs/linkedin.md](docs/linkedin.md). Nenhum material é publicado automaticamente.
-
-## Limites desta versão
-
-Documentos impressos, com uma coluna de texto, são o foco. Manuscritos, tabelas complexas,
-fotos muito inclinadas e orientação de 90 graus exigem trabalho adicional. Os filtros de busca
-reduzem correspondências fracas, mas ainda podem aceitar trechos fora do assunto ou rejeitar
-uma resposta válida. Similaridade não é probabilidade de acerto; confira a fonte.
-Referências alfanuméricas e anos entre 1900 e 2099 são exigidos literalmente na fonte
-ou no nome do arquivo. Isso evita confundir números próximos, mas um erro de OCR nesses
-campos pode impedir uma correspondência. Não há filtro literal geral para toda quantidade.
-
-Não há autenticação, hospedagem pública, chatbot ou treinamento de redes nesta versão.
-O servidor inicia em `127.0.0.1`. Índices antigos são atualizados automaticamente na primeira
-busca ou upload, usando OCR salvo e backup em `.data/backups/`. Para antecipar essa atualização,
-execute `uv run python -m scripts.reindex`. Essa operação preserva documentos e imagens.
 
 ## Referências e licença
 
