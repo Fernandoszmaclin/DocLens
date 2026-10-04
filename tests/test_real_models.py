@@ -15,11 +15,16 @@ def test_real_ocr_embeddings_and_pdf(tmp_path):
     settings = Settings(data_dir=tmp_path / "real-data")
     models = LocalModels(settings)
     with TestClient(create_app(settings, models)) as client:
+        reader = models._reader
+        assert reader is not None
+        assert models._encoder is None
+        assert models._reranker is None
         for extension, directory in (("png", "clean"), ("pdf", "pdf")):
             path = ROOT / "data" / "fixtures" / directory / f"manutencao_01.{extension}"
             response = client.post("/documents", files={"file": (path.name, path.read_bytes())})
             assert response.status_code == 201, response.text
             assert "notebooks" in response.json()["pages"][0]["text"].lower()
+            assert models._reader is reader
         for method in (None, "semantic", "tfidf"):
             payload = {"query": "Problemas nos computadores"}
             if method is not None:

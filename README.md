@@ -35,6 +35,12 @@ uv run uvicorn doclens.api:app --host 127.0.0.1 --port 8000 --no-proxy-headers
 
 Abra **http://127.0.0.1:8000**. A documentação interativa da API fica em **/docs**.
 
+O servidor carrega o OCR antes de aceitar conexões e reutiliza o modelo nos uploads.
+Aguarde a mensagem `Application startup complete` no terminal antes de abrir a página.
+Os modelos de busca são carregados quando necessários. Se o OCR não puder carregar,
+a inicialização é interrompida; execute `uv run python -m scripts.prepare_models`
+e inicie o servidor novamente.
+
 O primeiro comando instala as dependências fixadas em `uv.lock`. O segundo baixa os pesos,
 verifica os SHA-256 autorizados do OCR e registra as revisões do NLP em `config/models.json`.
 Esse download

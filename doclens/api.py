@@ -2,6 +2,7 @@
 
 import logging
 import unicodedata
+from contextlib import asynccontextmanager
 from typing import Annotated, Literal
 from uuid import UUID
 
@@ -10,6 +11,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
+from starlette.concurrency import run_in_threadpool
 from starlette.exceptions import HTTPException
 
 from doclens.config import ROOT, Settings
@@ -43,12 +45,29 @@ class SearchRequest(BaseModel):
 def create_app(settings: Settings | None = None, models: ModelProvider | None = None) -> FastAPI:
     settings = settings or Settings()
     service = DocumentService(settings, models or LocalModels(settings))
+
+    @asynccontextmanager
+    async def lifespan(_: FastAPI):
+        logger.info("Carregando OCR local em CPU...")
+        try:
+            # Reutiliza o mesmo reader nos uploads sem bloquear o loop assíncrono.
+            await run_in_threadpool(lambda: service.models.reader)
+        except Exception:
+            logger.exception(
+                "Falha ao iniciar o OCR. Execute uv run python -m scripts.prepare_models "
+                "com acesso à internet e reinicie o servidor."
+            )
+            raise
+        logger.info("OCR pronto para receber documentos.")
+        yield
+
     app = FastAPI(
         title="DocLens",
         version="0.1.0",
         description="OCR e busca em português",
         docs_url=None,
         redoc_url=None,
+        lifespan=lifespan,
     )
     app.state.service = service
     app.mount("/static", StaticFiles(directory=ROOT / "static"), name="static")
