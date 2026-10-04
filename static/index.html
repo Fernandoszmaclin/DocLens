@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#255e43" />
-    <title>DocLens · Seus documentos, em foco</title>
+    <title>DocLens · Busca em documentos</title>
     <link rel="icon" href="/static/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/static/styles.css" />
     <script src="/static/app.js" defer></script>
@@ -71,14 +71,8 @@
       </nav>
       <div class="sidebar-note">
         <div class="note-symbol">Aa</div>
-        <strong>Do arquivo à descoberta.</strong>
-        <p>
-          Transforme documentos em texto pesquisável e encontre conexões entre
-          palavras.
-        </p>
-        <div class="mini-tags">
-          <span>Visão computacional</span><span>NLP</span>
-        </div>
+        <strong>Busca em documentos</strong>
+        <p>Envie arquivos e encontre informações.</p>
       </div>
       <div class="local-note">
         <span class="status-dot"></span>
@@ -100,11 +94,8 @@
       <main id="workspace">
         <div class="heading-row">
           <div>
-            <div class="eyebrow">LEIA ALÉM DAS PALAVRAS</div>
-            <h1>Seus documentos, em foco<span>.</span></h1>
-            <p class="lead">
-              Encontre o que precisa, mesmo quando as palavras são diferentes.
-            </p>
+            <h1>Pesquise seus documentos<span>.</span></h1>
+            <p class="lead">Encontre informações nos seus arquivos.</p>
           </div>
           <div class="project-badge">
             <svg class="icon"><use href="#i-eye" /></svg
@@ -120,8 +111,8 @@
             <svg class="icon"><use href="#i-upload" /></svg>
           </div>
           <div class="upload-copy">
-            <h2 id="upload-title">Dê uma nova perspectiva aos seus arquivos</h2>
-            <p>Arraste um documento aqui ou escolha um arquivo para começar.</p>
+            <h2 id="upload-title">Adicione um documento</h2>
+            <p>Arraste um arquivo ou selecione-o no computador.</p>
             <span>PNG, JPEG ou PDF · Até 10 MB · Até 5 páginas</span>
           </div>
           <div class="upload-actions">
@@ -195,14 +186,11 @@
               Combina significado e palavras para encontrar trechos relevantes.
             </p>
           </div>
-          <div class="suggestions">
-            <span>Experimente</span
-            ><button type="button" data-query="Problemas nos computadores">
-              Problemas nos computadores</button
-            ><button type="button" data-query="Reposição de materiais">
-              Reposição de materiais</button
-            ><button type="button" data-query="Mudança de expediente">
-              Mudança de expediente
+          <div id="recent-searches" class="recent-searches" hidden>
+            <span>Buscas recentes</span>
+            <div id="recent-search-list" class="recent-search-list"></div>
+            <button id="clear-recent-searches" type="button" class="clear-history">
+              Limpar
             </button>
           </div>
         </section>
