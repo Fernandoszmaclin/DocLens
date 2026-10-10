@@ -11,10 +11,13 @@ imagens, na preservação das fontes e na avaliação reproduzível.
 
 ## Demonstração pública e deploy gratuito
 
+[**Experimente o DocLens online**](https://doclens-fernando.streamlit.app/)
+
 A interface em `streamlit_app.py` permite publicar OCR, busca e destaques no
 **Streamlit Community Cloud**. Cada visitante recebe uma biblioteca temporária separada.
 O [guia de publicação](DEPLOY.md) contém os campos do deploy, limites e orientações para
-divulgação no GitHub e LinkedIn. A URL pública será adicionada após validar o deploy.
+divulgação no GitHub e LinkedIn. O primeiro processamento após reiniciar pode demorar;
+a biblioteca de cada visitante é temporária.
 
 Para abrir essa interface localmente: `uv sync --locked` e
 `uv run streamlit run streamlit_app.py`.

@@ -4,6 +4,11 @@ A interface pública usa **Streamlit Community Cloud**, com OCR, busca híbrida/
 e destaques nas imagens. O código está em `streamlit_app.py`; o processamento reutiliza
 as camadas existentes do DocLens.
 
+**Aplicação pública:** https://doclens-fernando.streamlit.app/
+
+Deploy validado em 10/10/2026 com OCR de PNG e PDF e busca híbrida na nuvem.
+O acesso público está habilitado nas configurações de compartilhamento.
+
 ## Publicação
 
 1. Abra [Streamlit Community Cloud](https://share.streamlit.io/) e entre com GitHub.
@@ -82,7 +87,7 @@ Sugestão de texto, substituindo o marcador pela URL verificada:
 
 > Publiquei o DocLens: OCR e busca híbrida em documentos em português, com destaque
 > do trecho na página original. O projeto integra visão computacional, NLP, Python
-> e uma interface web. Experimente com um documento fictício: [URL pública].
+> e uma interface web. Experimente com um documento fictício: https://doclens-fernando.streamlit.app/
 > Código e avaliação: https://github.com/Fernandoszmaclin/DocLens
 
 Pesquisa de planos realizada em 10/10/2026. Revise as condições do serviço antes de
