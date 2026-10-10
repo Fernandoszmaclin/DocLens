@@ -9,6 +9,16 @@ Este projeto de portfólio combina **Python, visão computacional, NLP e desenvo
 Os modelos são pré-treinados; a contribuição do projeto está na integração, no tratamento de
 imagens, na preservação das fontes e na avaliação reproduzível.
 
+## Demonstração pública e deploy gratuito
+
+A interface em `streamlit_app.py` permite publicar OCR, busca e destaques no
+**Streamlit Community Cloud**. Cada visitante recebe uma biblioteca temporária separada.
+O [guia de publicação](DEPLOY.md) contém os campos do deploy, limites e orientações para
+divulgação no GitHub e LinkedIn. A URL pública será adicionada após validar o deploy.
+
+Para abrir essa interface localmente: `uv sync --locked` e
+`uv run streamlit run streamlit_app.py`.
+
 ## O que funciona
 
 - Upload de PNG, JPEG e PDF: até 10 MB, cinco páginas e 25 megapixels por imagem.
