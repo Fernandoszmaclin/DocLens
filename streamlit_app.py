@@ -11,7 +11,11 @@ from doclens.errors import DocumentError, ModelUnavailable
 
 logger = logging.getLogger(__name__)
 
-st.set_page_config(page_title="DocLens · Seus documentos, em foco", page_icon="🔎", layout="wide")
+st.set_page_config(
+    page_title="DocLens · Seus documentos, em foco",
+    page_icon=ROOT / "static" / "logo.svg",
+    layout="wide",
+)
 
 
 @st.cache_resource(show_spinner=False)
