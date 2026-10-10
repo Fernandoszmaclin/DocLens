@@ -1,6 +1,6 @@
 # DocLens
 
-**Seus documentos, em foco.** OCR e busca híbrida em memorandos e comunicados em português.
+**Ache o que precisa sem reler tudo.** OCR e busca híbrida em memorandos e comunicados em português.
 
 Pesquise **“problemas nos computadores”**, encontre um comunicado sobre **“manutenção dos
 equipamentos de informática”** e confira o trecho destacado na página de origem.
@@ -8,6 +8,19 @@ equipamentos de informática”** e confira o trecho destacado na página de ori
 Este projeto de portfólio combina **Python, visão computacional, NLP e desenvolvimento web**.
 Os modelos são pré-treinados; a contribuição do projeto está na integração, no tratamento de
 imagens, na preservação das fontes e na avaliação reproduzível.
+
+## Demonstração pública e deploy gratuito
+
+[**Experimente o DocLens online**](https://doclens-app.streamlit.app/)
+
+A interface em `streamlit_app.py` permite publicar OCR, busca e destaques no
+**Streamlit Community Cloud**. Cada visitante recebe uma biblioteca temporária separada.
+O [guia de publicação](DEPLOY.md) contém os campos do deploy, limites e orientações para
+divulgação no GitHub e LinkedIn. O primeiro processamento após reiniciar pode demorar;
+a biblioteca de cada visitante é temporária.
+
+Para abrir essa interface localmente: `uv sync --locked` e
+`uv run streamlit run streamlit_app.py`.
 
 ## O que funciona
 
