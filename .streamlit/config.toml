@@ -1,10 +1,35 @@
 [theme]
 base = "light"
-primaryColor = "#246f66"
-backgroundColor = "#fafaf7"
-secondaryBackgroundColor = "#f0f2ed"
-textColor = "#20342f"
+primaryColor = "#255e43"
+backgroundColor = "#fbfcf8"
+secondaryBackgroundColor = "#f0f5ec"
+textColor = "#20382b"
 font = "sans serif"
+borderColor = "#d5e2ce"
+baseRadius = "0.75rem"
+buttonRadius = "0.5rem"
+showWidgetBorder = true
+blueColor = "#255e43"
+blueBackgroundColor = "#edf5e5"
+blueTextColor = "#255e43"
+greenColor = "#255e43"
+greenBackgroundColor = "#edf5e5"
+greenTextColor = "#255e43"
+linkColor = "#255e43"
+
+[theme.sidebar]
+primaryColor = "#c6e4a6"
+backgroundColor = "#255e43"
+secondaryBackgroundColor = "#316e50"
+textColor = "#ffffff"
+borderColor = "#568269"
+blueColor = "#c6e4a6"
+blueBackgroundColor = "#316e50"
+blueTextColor = "#f4faef"
+greenColor = "#c6e4a6"
+greenBackgroundColor = "#316e50"
+greenTextColor = "#f4faef"
+linkColor = "#c6e4a6"
 
 [server]
 maxUploadSize = 10

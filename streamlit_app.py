@@ -12,7 +12,7 @@ from doclens.errors import DocumentError, ModelUnavailable
 logger = logging.getLogger(__name__)
 
 st.set_page_config(
-    page_title="DocLens · Seus documentos, em foco",
+    page_title="DocLens · Busca em documentos",
     page_icon=ROOT / "static" / "favicon.png",
     layout="wide",
 )
@@ -64,9 +64,10 @@ def highlighted_page(session, hit):
 def main():
     session = private_session()
     st.title("DocLens")
-    st.markdown("### Seus documentos, em foco.")
+    st.markdown("### Ache o que precisa sem reler tudo.")
     st.write(
-        "Envie um documento, pesquise com suas palavras e confira a resposta na página original."
+        "Envie um PDF ou uma imagem e diga o que está procurando. "
+        "O DocLens encontra os trechos e mostra onde eles aparecem no documento."
     )
     st.caption(
         "Demonstração gratuita de portfólio · OCR em português e inglês · "

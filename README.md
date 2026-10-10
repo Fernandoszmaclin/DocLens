@@ -1,6 +1,6 @@
 # DocLens
 
-**Seus documentos, em foco.** OCR e busca híbrida em memorandos e comunicados em português.
+**Ache o que precisa sem reler tudo.** OCR e busca híbrida em memorandos e comunicados em português.
 
 Pesquise **“problemas nos computadores”**, encontre um comunicado sobre **“manutenção dos
 equipamentos de informática”** e confira o trecho destacado na página de origem.
