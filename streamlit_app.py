@@ -34,7 +34,7 @@ def report_error(error):
 
 def process_upload(session, content, filename):
     try:
-        with st.spinner("Lendo o documento… Na primeira vez, os modelos precisam ser preparados."):
+        with st.spinner("Lendo o documento... Iniciando modelos."):
             document = session.ingest(content, filename)
         st.session_state.pop("search_response", None)
         st.success(f"{document['filename']} indexado. Faça uma busca para encontrar os trechos.")
