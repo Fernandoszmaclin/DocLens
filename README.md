@@ -11,7 +11,7 @@ imagens, na preservação das fontes e na avaliação reproduzível.
 
 ## Demonstração pública e deploy gratuito
 
-[**Experimente o DocLens online**](https://doclens-fernando.streamlit.app/)
+[**Experimente o DocLens online**](https://doclens-app.streamlit.app/)
 
 A interface em `streamlit_app.py` permite publicar OCR, busca e destaques no
 **Streamlit Community Cloud**. Cada visitante recebe uma biblioteca temporária separada.
