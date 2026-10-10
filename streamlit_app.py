@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 st.set_page_config(
     page_title="DocLens · Seus documentos, em foco",
-    page_icon=ROOT / "static" / "logo.svg",
+    page_icon=ROOT / "static" / "favicon.png",
     layout="wide",
 )
 
