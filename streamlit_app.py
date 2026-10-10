@@ -63,8 +63,8 @@ def highlighted_page(session, hit):
 
 def main():
     session = private_session()
-    st.title("DocLens")
-    st.markdown("### Ache o que precisa sem reler tudo.")
+    st.title("DocLens", anchor=False)
+    st.subheader("Ache o que precisa sem reler tudo.", anchor=False)
     st.write(
         "Envie um PDF ou uma imagem e diga o que está procurando. "
         "O DocLens encontra os trechos e mostra onde eles aparecem no documento."
