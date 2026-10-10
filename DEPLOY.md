@@ -19,7 +19,7 @@ O acesso público está habilitado nas configurações de compartilhamento.
    | Campo | Valor |
    | --- | --- |
    | Repository | `Fernandoszmaclin/DocLens` |
-   | Branch | `codex/streamlit-deploy` (ou `main` após integrar o PR) |
+   | Branch | `deploy/streamlit-deploy` |
    | Main file path | `streamlit_app.py` |
    | Python, em Advanced settings | **3.12** |
    | App URL | `doclens-app` (ou outro subdomínio disponível em um novo deploy) |
