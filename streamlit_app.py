@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 
 from doclens.cloud import CloudRuntime, CloudSession
 from doclens.config import ROOT
-from doclens.errors import DocumentError
+from doclens.errors import DocumentError, ModelUnavailable
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +24,14 @@ def private_session():
     return CloudSession(shared_runtime())
 
 
+def report_error(error):
+    if isinstance(error, ModelUnavailable):
+        logger.error("Modelos indisponíveis na demonstração", exc_info=error)
+        st.error("Não foi possível preparar os modelos. Aguarde um pouco e tente novamente.")
+    else:
+        st.error(str(error))
+
+
 def process_upload(session, content, filename):
     try:
         with st.spinner("Lendo o documento… Na primeira vez, os modelos precisam ser preparados."):
@@ -31,7 +39,7 @@ def process_upload(session, content, filename):
         st.session_state.pop("search_response", None)
         st.success(f"{document['filename']} indexado. Faça uma busca para encontrar os trechos.")
     except DocumentError as exc:
-        st.error(str(exc))
+        report_error(exc)
     except Exception:
         logger.exception("Falha no upload da demonstração")
         st.error("Não foi possível processar o documento. Tente novamente.")
@@ -124,7 +132,7 @@ def main():
                     )
             except DocumentError as exc:
                 st.session_state.pop("search_response", None)
-                st.error(str(exc))
+                report_error(exc)
             except Exception:
                 st.session_state.pop("search_response", None)
                 logger.exception("Falha na busca da demonstração")
