@@ -22,6 +22,37 @@ a biblioteca de cada visitante é temporária.
 Para abrir essa interface localmente: `uv sync --locked` e
 `uv run streamlit run streamlit_app.py`.
 
+## Interface e funcionalidades
+
+Capturas da demonstração pública em **Streamlit**, usando o documento fictício
+`manutencao_01.png` incluído no projeto. A versão local servida pelo FastAPI tem
+um layout próprio; as imagens abaixo mostram a experiência disponível no link online.
+
+### Envio de documentos e OCR
+
+A biblioteca aceita PNG, JPEG e PDF. O botão **Testar com um exemplo** permite
+experimentar o fluxo sem enviar um arquivo próprio.
+
+![Interface do DocLens com a biblioteca e os controles de envio de documentos](images/screenshots/01-interface.jpg)
+
+Durante a leitura, a interface informa que o documento está sendo processado.
+Depois da indexação, ele fica disponível para pesquisa na biblioteca da sessão.
+
+![DocLens processando o documento fictício com OCR](images/screenshots/02-processamento-ocr.jpg)
+
+### Busca híbrida e consulta à fonte
+
+Busque **“problemas nos computadores”** para encontrar o trecho sobre notebooks
+com lentidão e desligamentos inesperados. O formulário permite escolher entre
+busca híbrida, semântica (NLP) e por palavras (TF-IDF), além do máximo de trechos.
+
+![Busca híbrida por problemas nos computadores com o trecho encontrado](images/screenshots/03-busca-hibrida.jpg)
+
+Cada resultado identifica o arquivo e a página. Ao expandir **Ver trecho destacado
+na página**, é possível conferir a passagem diretamente na imagem do documento.
+
+![Passagem encontrada pelo DocLens destacada na página original](images/screenshots/04-destaque-na-fonte.jpg)
+
 ## O que funciona
 
 - Upload de PNG, JPEG e PDF: até 10 MB, cinco páginas e 25 megapixels por imagem.
