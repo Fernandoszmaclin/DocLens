@@ -13,7 +13,7 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --locked
-      - run: uv run ruff check doclens scripts tests
+      - run: uv run ruff check doclens scripts tests streamlit_app.py
       - run: uv run pytest -m "not models" -q
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
