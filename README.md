@@ -62,9 +62,12 @@ A preparação inicial precisa de internet para baixar os modelos.
 
 ## Sobre o projeto
 
-Projeto de portfólio desenvolvido em Python, com reconhecimento de texto e busca por significado.
-Usa modelos pré-treinados e documentos fictícios para demonstrar o fluxo completo.
-O reconhecimento e a busca podem falhar; confira sempre a passagem na fonte.
+O DocLens é um buscador de documentos que reúne OCR, recuperação de texto e consulta à fonte. Na versão local, a interface web é servida pelo FastAPI; a demonstração online usa Streamlit.
+Durante o processamento, PDFs são renderizados como imagens. O EasyOCR reconhece o texto e registra as coordenadas de cada trecho na página. O sistema organiza o texto em passagens pesquisáveis e salva os resultados e os vetores de busca no SQLite. A busca híbrida combina resultados por significado e por palavras. As coordenadas do OCR permitem destacar cada resultado na imagem original.
+
+O projeto usa modelos pré-treinados e documentos fictícios. As avaliações medem o comportamento nesse conjunto de exemplos, mas não garantem a precisão em outros documentos. Confira sempre as passagens encontradas na fonte.
+
+Stack: Python 3.12, FastAPI e Uvicorn no backend; HTML, CSS e JavaScript na interface local; Streamlit na demonstração online. O processamento de documentos usa EasyOCR, OpenCV, Pillow e pypdfium2. A busca usa Sentence Transformers e scikit-learn. O armazenamento é feito com SQLite, e as dependências são gerenciadas pelo uv.
 
 Os detalhes das avaliações estão nos [relatórios de OCR](reports/results.md) e
 [de busca](reports/hybrid-search.md). Código e documentos fictícios sob a [licença MIT](LICENSE).
